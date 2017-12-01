@@ -325,3 +325,10 @@ function getSchedule(index)
   var schedule = document.getElementById("schedule");
   schedule.innerHTML = string;
 }
+
+// set navbar item as active onclick
+$(document).ready(function(){
+  $(".nav-item").click(function(){
+    $(this).parent().addClass('active');
+  })
+});
