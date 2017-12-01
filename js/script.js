@@ -113,9 +113,9 @@ function getStaffList()
 
   var stafftable = "<table class='table table-bordered'>"+
   "<tr>"+
-    "<td>"+
+    "<th>"+
       "Manager"+
-    "</td>"+
+    "</th>"+
     "<td colspan='2'>"+
       "Name: "+managername+"<br>"+
       "Phone: "+managerphone+"<br>"+
@@ -123,9 +123,9 @@ function getStaffList()
     "</td>"+
   "</tr>"+
   "<tr>"+
-    "<td rowspan='"+(cleaner.length)+"'>"+
+    "<th rowspan='"+(cleaner.length)+"'>"+
       "Cleaners"+
-    "</td>";
+    "</th>";
 
     for(i=0;i<cleaner.length;i++)
     {
