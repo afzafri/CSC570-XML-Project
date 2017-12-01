@@ -29,17 +29,14 @@ function getCompanyDetails()
   var rateduration = company.getElementsByTagName("rate")[0].getAttribute("duration");
 
   var cardtop = "<div class='card'>"+
-                  "<h4 class='card-header bg-info text-white'>Company Details</h4>"+
+                  "<h4 class='card-header bg-info text-white'>"+compname+"</h4>"+
                   "<div class='card-body'>";
   var cardbot = "</div>"+
               "</div>"+
               "<br><br>";
 
   // create company details table
-  var companytable = "<table border='1' style='border-collapse='collapse''>"+
-  "<tr>"+
-    "<th colspan='5' bgcolor='aqua'>"+compname+"</th>"+          
-  "</tr>"+
+  var companytables = "<table class='table table-bordered'>"+
   "<tr>"+
     "<td colspan='2'>"+
       "Company Address<br></br>"+
@@ -75,6 +72,53 @@ function getCompanyDetails()
     "</td>  "+       
   "</tr>"+
 "</table>";
+
+var companytable = "<table class='table table-bordered'>"+
+    "<tr>"+
+      "<th colspan='2' class='bg-info text-white'>Company Address</th>"+
+      "</tr>"+
+      "<tr>"+
+        "<td>"+
+          "<div align='center'>"+
+            "Street<br>"+
+            "City<br>"+
+            "State<br>"+
+            "Postcode<br>"+
+          "</div>"+
+        "</td>"+
+        "<td>"+
+          "<div align='center'>"+
+          street+"<br>"+
+          city+"<br>"+
+          state+"<br>"+
+          postcode+"<br>"+
+        "</div>"+
+        "</td>"+
+      "</tr>"+
+      "<tr>"+
+        "<th colspan='2' class='bg-info text-white'>Company Contact</th>"+
+      "</tr>"+
+      "<tr>"+
+        "<td>"+
+          "<div align='center'>"+
+            "Phone<br>"+
+            "Email<br>"+
+          "</div>"+
+        "</td>"+
+        "<td>"+
+          phone+"<br>"+
+          email+"<br>"+
+        "</td>"+
+      "</tr>"+
+      "<tr>"+
+        "<th class='bg-info text-white'>Cleaning Fee Rate</th>"+
+        "<td>"+
+          "<div align='center'>"+
+            rateunit+rate+" "+rateduration+
+          "</div>"+
+        "</td>"+
+      "</tr>"+
+  "</table>";
 
   // clear schedule output
   var schedule = document.getElementById("schedule");
@@ -359,6 +403,8 @@ function getSchedule(index)
   var schedule = document.getElementById("schedule");
   schedule.innerHTML = string;
 }
+
+
 
 // set navbar item as active onclick
 $(document).ready(function(){
