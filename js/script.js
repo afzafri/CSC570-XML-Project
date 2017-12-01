@@ -28,6 +28,13 @@ function getCompanyDetails()
   var rateunit = company.getElementsByTagName("rate")[0].getAttribute("unit");
   var rateduration = company.getElementsByTagName("rate")[0].getAttribute("duration");
 
+  var cardtop = "<div class='card'>"+
+                  "<h4 class='card-header bg-info text-white'>Company Details</h4>"+
+                  "<div class='card-body'>";
+  var cardbot = "</div>"+
+              "</div>"+
+              "<br><br>";
+
   // create company details table
   var companytable = "<table border='1' style='border-collapse='collapse''>"+
   "<tr>"+
@@ -75,7 +82,7 @@ function getCompanyDetails()
 
   // get output area
   var content = document.getElementById("content");
-  content.innerHTML = companytable;
+  content.innerHTML = cardtop + companytable + cardbot;
   
 }
 
@@ -102,6 +109,13 @@ function getStaffList()
     var cnamenode = cleaner[i].getElementsByTagName("name")[0];
     cleanerNameString += "<li>"+cnamenode.firstChild.nodeValue+"</li>";  
   }
+
+  var cardtop = "<div class='card'>"+
+                  "<h4 class='card-header bg-info text-white'>Staff List</h4>"+
+                  "<div class='card-body'>";
+  var cardbot = "</div>"+
+              "</div>"+
+              "<br><br>";
 
   var stafftable = "<table border='1' style='border-collapse='collapse''>"+
   "<tr>"+
@@ -133,7 +147,7 @@ function getStaffList()
 
   // get output area
   var content = document.getElementById("content");
-  content.innerHTML = stafftable;
+  content.innerHTML = cardtop + stafftable + cardbot;
   
 }
 
@@ -148,6 +162,13 @@ function getHouseList()
 
   // get wages rate
   var wagesRate = xmlDoc.getElementsByTagName("company")[0].getElementsByTagName("rate")[0].firstChild.nodeValue;
+
+  var cardtop = "<div class='card'>"+
+                  "<h4 class='card-header bg-info text-white'>House List</h4>"+
+                  "<div class='card-body'>";
+  var cardbot = "</div>"+
+              "</div>"+
+              "<br><br>";
 
   var housetable = "<table border='1' style='border-collapse='collapse''>"+
   "<tr bgcolor='aqua'>"+
@@ -216,7 +237,7 @@ function getHouseList()
 
   // get output area
   var content = document.getElementById("content");
-  content.innerHTML = housetable;
+  content.innerHTML = cardtop + housetable + cardbot;
 }
 
 // calculate the total fare wages for each house
