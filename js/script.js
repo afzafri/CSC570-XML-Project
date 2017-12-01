@@ -293,8 +293,14 @@ function getSchedule(index)
     var monthname = hmonth[i].getAttribute("name");
     var totalfaremonth = 0.0;
 
-    string += "<fieldset>";
-    string += "<legend><h3>"+monthname+"</h3></legend>";
+    var cardtop = "<div class='card'>"+
+                  "<h4 class='card-header bg-info text-white'>"+monthname+"</h4>"+
+                  "<div class='card-body'>";
+    var cardbot = "</div>"+
+              "</div>"+
+              "<br><br>";
+
+    string += cardtop;
 
     var hweek = hmonth[i].getElementsByTagName("week");
 
@@ -341,8 +347,8 @@ function getSchedule(index)
       string += "</table><br>";
       totalfaremonth += parseFloat(totalfareweek);
     }
-    string += "Total fare for the month: <b>RM"+totalfaremonth+"</b>";
-    string += "</fieldset><br>";
+    string += "Total fare for the month: <b>RM"+totalfaremonth+"</b><br>";
+    string += cardbot;
   }
 
   $(document).ready(function(){
