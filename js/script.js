@@ -69,6 +69,22 @@ function getCompanyDetails()
   "</tr>"+
 "</table>";
 
+  // clear schedule output
+  var schedule = document.getElementById("schedule");
+  schedule.innerHTML = "";
+
+  // get output area
+  var content = document.getElementById("content");
+  content.innerHTML = companytable;
+  
+}
+
+// get list of staff
+function getStaffList()
+{
+  // company element
+  var company = xmlDoc.getElementsByTagName("company")[0];
+
   // get company staff
   var staff = company.getElementsByTagName("staff")[0];
   // manager
@@ -117,7 +133,7 @@ function getCompanyDetails()
 
   // get output area
   var content = document.getElementById("content");
-  content.innerHTML = companytable+"<br><br>"+stafftable;
+  content.innerHTML = stafftable;
   
 }
 
