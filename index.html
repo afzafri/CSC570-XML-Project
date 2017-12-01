@@ -233,6 +233,58 @@ function calcTotalWages(index,rate)
   return totalWages;
 }
 
+// get the list of schedule for each house
+function getSchedule(index)
+{
+  var string = "";
+  var houses = xmlDoc.getElementsByTagName("houses")[0];
+  var house = houses.getElementsByTagName("house");
+
+  var hmonth = house[index].getElementsByTagName("month");
+  
+  for(i=0;i<hmonth.length;i++)
+  {
+    var monthname = hmonth[i].getAttribute("name");
+    string += "<h3>"+monthname+"</h3>";
+
+    var hweek = hmonth[i].getElementsByTagName("week");
+
+    for(j=0;j<hweek.length;j++)
+    {
+      string += "<b>Week #"+(j+1)+"</b><br>";
+      string += "<table border='1' style='border-collapse='collapse''>"+
+                "<tr bgcolor='aqua'>"+
+                   "<th>Day</th>"+
+                   "<th>Date</th>"+
+                   "<th>Cleaning Duration</th>"+
+                   "<th>Cleaner</th>"+
+                "</tr>";
+
+
+      var hdaynode = hweek[j].getElementsByTagName("day");
+      for(z=0;z<hdaynode.length;z++)
+      {
+        var hdayname = hdaynode[z].getAttribute("name");
+        var daydate = hdaynode[z].getElementsByTagName("date")[0].firstChild.nodeValue;
+        var dayduration = hdaynode[z].getElementsByTagName("duration")[0].firstChild.nodeValue;
+        var daycleaner = hdaynode[z].getElementsByTagName("cleaner")[0].firstChild.nodeValue;
+        
+        string += "<tr>"+
+                    "<td>"+hdayname+"</td>"+
+                    "<td>"+daydate+"</td>"+
+                    "<td>"+dayduration+"</td>"+
+                    "<td>"+daycleaner+"</td>"+
+                  "</tr>";
+
+      }
+      string += "</table><br>";
+    }
+  }
+  // get output area
+  var schedule = document.getElementById("schedule");
+  schedule.innerHTML = string;
+}
+
 </script>
 </head>
 <body>
