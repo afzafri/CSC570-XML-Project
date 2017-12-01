@@ -205,7 +205,6 @@ function getHouseList()
   // houses element
   var houses = xmlDoc.getElementsByTagName("houses")[0];
 
-  // get company address
   var house = houses.getElementsByTagName("house");
 
   // get wages rate
@@ -408,38 +407,81 @@ function getSchedule(index)
 // get the list of schedule for specific cleaner
 function getCleanersSchedule(cleanerName)
 {
-var string = '';
-  // day element
-  var days = xmlDoc.getElementsByTagName("day");
-  console.log(days);
+  var string = '';
+  string += "<table class='table table-bordered'>"+
+                "<tr class='bg-info text-white'>"+
+                   "<th>Day</th>"+
+                   "<th>Date</th>"+
+                   "<th>Cleaning Duration</th>"+
+                   "<th>Cleaner</th>"+
+                   "<th>Fare</th>"+
+                   "<th>House Owner</th>"+
+                   "<th>House Address</th>"+
+                   "<th>House Type</th>"+
+                "</tr>";
 
-  for(i=0;i<days.length;i++)
+  // houses element
+  var houses = xmlDoc.getElementsByTagName("houses")[0];
+  var house = houses.getElementsByTagName("house");
+
+  for(i=0;i<house.length;i++)
   {
-    var hdayname = days[i].getAttribute("name");
-    var daydate = days[i].getElementsByTagName("date")[0].firstChild.nodeValue;
-    var dayduration = days[i].getElementsByTagName("duration")[0].firstChild.nodeValue;
-    var daycleaner = days[i].getElementsByTagName("cleaner")[0].firstChild.nodeValue;
-    var rateperday = parseFloat(dayduration) * getFareRate();
+      // get house type attribute
+      var housetype =  house[i].getAttribute("type");
 
-    if(daycleaner == cleanerName)
-    {
-      string += "<tr>"+
-                "<td>"+hdayname+"</td>"+
-                "<td>"+daydate+"</td>"+
-                "<td>"+dayduration+"</td>"+
-                "<td>"+daycleaner+"</td>"+
-                "<td>RM"+rateperday+"</td>"+
-              "</tr>";
-    }
+      // get house address
+      var haddress = house[i].getElementsByTagName("address")[0];
+      var hstreet = haddress.getElementsByTagName("street")[0].firstChild.nodeValue;
+      var hcity = haddress.getElementsByTagName("city")[0].firstChild.nodeValue;
+      var hstate = haddress.getElementsByTagName("state")[0].firstChild.nodeValue;
+      var hpostcode = haddress.getElementsByTagName("postcode")[0].firstChild.nodeValue;
+      var fullAddress = hstreet+", "+hpostcode+" "+hcity+", "+hstate;
+
+      // get house owner
+      var howner = house[i].getElementsByTagName("owner")[0];
+      var hname = howner.getElementsByTagName("name")[0].firstChild.nodeValue;
+      var hcontact = howner.getElementsByTagName("contact")[0];
+      var hphone = hcontact.getElementsByTagName("phone")[0].firstChild.nodeValue;
+      var hemail = hcontact.getElementsByTagName("email")[0].firstChild.nodeValue;
+
+      var houseOwnerContact = "Name: "+hname+"<br>Phone: "+hphone+"<br>Email: "+hemail;
+
+      // day element
+      var days = house[i].getElementsByTagName("day");
+
+      for(j=0;j<days.length;j++)
+      {
+        var hdayname = days[j].getAttribute("name");
+        var daydate = days[j].getElementsByTagName("date")[0].firstChild.nodeValue;
+        var dayduration = days[j].getElementsByTagName("duration")[0].firstChild.nodeValue;
+        var daycleaner = days[j].getElementsByTagName("cleaner")[0].firstChild.nodeValue;
+        var rateperday = parseFloat(dayduration) * getFareRate();
+
+        if(daycleaner == cleanerName)
+        {
+          string += "<tr>"+
+                    "<td>"+hdayname+"</td>"+
+                    "<td>"+daydate+"</td>"+
+                    "<td>"+dayduration+"</td>"+
+                    "<td>"+daycleaner+"</td>"+
+                    "<td>RM"+rateperday+"</td>"+
+                    "<td>"+houseOwnerContact+"</td>"+
+                    "<td>"+fullAddress+"</td>"+
+                    "<td>"+housetype+"</td>"+
+                  "</tr>";
+        }
+      }
   }
 
+  string += "</table>";
+  
   $(document).ready(function(){
     $('#scheduleModal').modal('show');
   });
 
   // get output area
   var schedule = document.getElementById("schedule");
-  schedule.innerHTML = "<table>"+string+"</table>";
+  schedule.innerHTML = string;
 }
 
 // set navbar item as active onclick
