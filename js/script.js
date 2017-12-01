@@ -354,8 +354,7 @@ function getSchedule(index)
       string += "<b>Week #"+(j+1)+"</b><br>";
       string += "<table class='table table-bordered'>"+
                 "<tr class='bg-info text-white'>"+
-                   "<th>Day</th>"+
-                   "<th>Date</th>"+
+                   "<th>Day & Date</th>"+
                    "<th>Cleaning Duration</th>"+
                    "<th>Cleaner</th>"+
                    "<th>Fare</th>"+
@@ -373,8 +372,7 @@ function getSchedule(index)
         totalfareweek += parseFloat(rateperday);
 
         string += "<tr>"+
-                    "<td>"+hdayname+"</td>"+
-                    "<td>"+daydate+"</td>"+
+                    "<td>"+hdayname+"<br>"+daydate+"</td>"+
                     "<td>"+dayduration+"</td>"+
                     "<td>"+daycleaner+"</td>"+
                     "<td>RM"+rateperday+"</td>"+
@@ -383,7 +381,7 @@ function getSchedule(index)
       }
 
       string += "<tr>"+
-      				"<th colspan='4' align='right'>TOTAL</th>"+
+      				"<th colspan='3' align='right'>TOTAL</th>"+
       				"<td>RM"+totalfareweek+"</td>"+
       			"</tr>";
 
@@ -410,8 +408,7 @@ function getCleanersSchedule(cleanerName)
   var string = '';
   string += "<table class='table table-bordered'>"+
                 "<tr class='bg-info text-white'>"+
-                   "<th>Day</th>"+
-                   "<th>Date</th>"+
+                   "<th>Day & Date</th>"+
                    "<th>Cleaning Duration</th>"+
                    "<th>Cleaner</th>"+
                    "<th>Fare</th>"+
@@ -460,21 +457,20 @@ function getCleanersSchedule(cleanerName)
         if(daycleaner == cleanerName)
         {
           string += "<tr>"+
-                    "<td>"+hdayname+"</td>"+
-                    "<td>"+daydate+"</td>"+
+                    "<td>"+hdayname+"<br>"+daydate+"</td>"+
                     "<td>"+dayduration+"</td>"+
                     "<td>"+daycleaner+"</td>"+
                     "<td>RM"+rateperday+"</td>"+
                     "<td>"+houseOwnerContact+"</td>"+
                     "<td>"+fullAddress+"</td>"+
-                    "<td>"+housetype+"</td>"+
+                    "<td>"+housetype.toUpperCase()+"</td>"+
                   "</tr>";
         }
       }
   }
 
   string += "</table>";
-  
+
   $(document).ready(function(){
     $('#scheduleModal').modal('show');
   });
