@@ -408,13 +408,38 @@ function getSchedule(index)
 // get the list of schedule for specific cleaner
 function getCleanersSchedule(cleanerName)
 {
+var string = '';
+  // day element
+  var days = xmlDoc.getElementsByTagName("day");
+  console.log(days);
+
+  for(i=0;i<days.length;i++)
+  {
+    var hdayname = days[i].getAttribute("name");
+    var daydate = days[i].getElementsByTagName("date")[0].firstChild.nodeValue;
+    var dayduration = days[i].getElementsByTagName("duration")[0].firstChild.nodeValue;
+    var daycleaner = days[i].getElementsByTagName("cleaner")[0].firstChild.nodeValue;
+    var rateperday = parseFloat(dayduration) * getFareRate();
+
+    if(daycleaner == cleanerName)
+    {
+      string += "<tr>"+
+                "<td>"+hdayname+"</td>"+
+                "<td>"+daydate+"</td>"+
+                "<td>"+dayduration+"</td>"+
+                "<td>"+daycleaner+"</td>"+
+                "<td>RM"+rateperday+"</td>"+
+              "</tr>";
+    }
+  }
+
   $(document).ready(function(){
     $('#scheduleModal').modal('show');
   });
 
   // get output area
   var schedule = document.getElementById("schedule");
-  schedule.innerHTML = cleanerName;
+  schedule.innerHTML = "<table>"+string+"</table>";
 }
 
 // set navbar item as active onclick
