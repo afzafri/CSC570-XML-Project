@@ -377,7 +377,7 @@ function getSchedule(index)
 function getCleanersSchedule(cleanerName)
 {
   var string = '';
-  string += "<table class='table table-bordered'>"+
+  string += "<table class='table table-bordered table-responsive'>"+
                 "<tr class='bg-info text-white'>"+
                    "<th>#</th>"+
                    "<th>Day & Date</th>"+
