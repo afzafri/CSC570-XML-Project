@@ -233,6 +233,16 @@ function calcTotalWages(index,rate)
   return totalWages;
 }
 
+// get fare rate
+function getFareRate()
+{
+	// company element
+	var company = xmlDoc.getElementsByTagName("company")[0];
+	// get wages rate
+	var rate = company.getElementsByTagName("rate")[0].firstChild.nodeValue;
+	return rate;
+}
+
 // get the list of schedule for each house
 function getSchedule(index)
 {
@@ -258,6 +268,7 @@ function getSchedule(index)
                    "<th>Date</th>"+
                    "<th>Cleaning Duration</th>"+
                    "<th>Cleaner</th>"+
+                   "<th>Fare</th>"+
                 "</tr>";
 
 
@@ -268,12 +279,14 @@ function getSchedule(index)
         var daydate = hdaynode[z].getElementsByTagName("date")[0].firstChild.nodeValue;
         var dayduration = hdaynode[z].getElementsByTagName("duration")[0].firstChild.nodeValue;
         var daycleaner = hdaynode[z].getElementsByTagName("cleaner")[0].firstChild.nodeValue;
+        var rateperday = parseFloat(dayduration) * getFareRate();
         
         string += "<tr>"+
                     "<td>"+hdayname+"</td>"+
                     "<td>"+daydate+"</td>"+
                     "<td>"+dayduration+"</td>"+
                     "<td>"+daycleaner+"</td>"+
+                    "<td>RM"+rateperday+"</td>"+
                   "</tr>";
 
       }
