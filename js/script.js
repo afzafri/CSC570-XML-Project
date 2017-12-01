@@ -367,13 +367,14 @@ function getSchedule(index)
         var hdayname = hdaynode[z].getAttribute("name");
         var daydate = hdaynode[z].getElementsByTagName("date")[0].firstChild.nodeValue;
         var dayduration = hdaynode[z].getElementsByTagName("duration")[0].firstChild.nodeValue;
+        var durationunit = hdaynode[z].getElementsByTagName("duration")[0].getAttribute("unit");
         var daycleaner = hdaynode[z].getElementsByTagName("cleaner")[0].firstChild.nodeValue;
         var rateperday = parseFloat(dayduration) * getFareRate();
         totalfareweek += parseFloat(rateperday);
 
         string += "<tr>"+
                     "<td>"+hdayname+"<br>"+daydate+"</td>"+
-                    "<td>"+dayduration+"</td>"+
+                    "<td>"+dayduration+" "+durationunit+"</td>"+
                     "<td>"+daycleaner+"</td>"+
                     "<td>RM"+rateperday+"</td>"+
                   "</tr>";
@@ -408,6 +409,7 @@ function getCleanersSchedule(cleanerName)
   var string = '';
   string += "<table class='table table-bordered'>"+
                 "<tr class='bg-info text-white'>"+
+                   "<th>#</th>"+
                    "<th>Day & Date</th>"+
                    "<th>Cleaning Duration</th>"+
                    "<th>Cleaner</th>"+
@@ -420,6 +422,7 @@ function getCleanersSchedule(cleanerName)
   // houses element
   var houses = xmlDoc.getElementsByTagName("houses")[0];
   var house = houses.getElementsByTagName("house");
+  var count = 1;
 
   for(i=0;i<house.length;i++)
   {
@@ -451,20 +454,23 @@ function getCleanersSchedule(cleanerName)
         var hdayname = days[j].getAttribute("name");
         var daydate = days[j].getElementsByTagName("date")[0].firstChild.nodeValue;
         var dayduration = days[j].getElementsByTagName("duration")[0].firstChild.nodeValue;
+        var durationunit = days[j].getElementsByTagName("duration")[0].getAttribute("unit");
         var daycleaner = days[j].getElementsByTagName("cleaner")[0].firstChild.nodeValue;
         var rateperday = parseFloat(dayduration) * getFareRate();
 
         if(daycleaner == cleanerName)
         {
           string += "<tr>"+
+                    "<td>"+count+"</td>"+
                     "<td>"+hdayname+"<br>"+daydate+"</td>"+
-                    "<td>"+dayduration+"</td>"+
+                    "<td>"+dayduration+" "+durationunit+"</td>"+
                     "<td>"+daycleaner+"</td>"+
                     "<td>RM"+rateperday+"</td>"+
                     "<td>"+houseOwnerContact+"</td>"+
                     "<td>"+fullAddress+"</td>"+
                     "<td>"+housetype.toUpperCase()+"</td>"+
                   "</tr>";
+          count++;
         }
       }
   }
