@@ -30,50 +30,13 @@ function getCompanyDetails()
 
   var cardtop = "<div class='card'>"+
                   "<h4 class='card-header bg-info text-white'>"+compname+"</h4>"+
-                  "<div class='card-body'>";
+                  "<div class='card-body table-responsive'>";
   var cardbot = "</div>"+
               "</div>"+
               "<br><br>";
 
   // create company details table
-  var companytables = "<table class='table table-bordered'>"+
-  "<tr>"+
-    "<td colspan='2'>"+
-      "Company Address<br></br>"+
-      "<div align='center'>"+
-        "Street<br></br>"+
-        "City<br></br>"+
-        "State<br></br>"+
-        "Postcode<br></br>"+
-      "</div>"+
-      "Company Contact<br></br>"+
-      "<div align='center'>"+
-        "Phone<br></br>"+
-        "Email<br></br>"+
-      "</div>"+
-      "Cleaning Fee Rate"+
-    "</td> "+
-    "<td colspan='3' align='right'>"+
-      "<div align='left'>"+
-       "<br></br>"+
-      "<div align='center'>"+
-        street+"<br></br>"+
-        city+"<br></br>"+
-        state+"<br></br>"+
-        postcode+"<br></br>"+
-      "</div>"+
-     "<br></br>"+
-      "<div align='center'>"+
-        phone+"<br></br>"+
-        email+"<br></br>"+
-        rateunit+rate+" "+rateduration+
-      "</div>"+
-      "</div>"+
-    "</td>  "+       
-  "</tr>"+
-"</table>";
-
-var companytable = "<table class='table table-bordered'>"+
+  var companytable = "<table class='table table-bordered'>"+
     "<tr>"+
       "<th colspan='2' class='bg-info text-white'>Company Address</th>"+
       "</tr>"+
@@ -150,7 +113,7 @@ function getStaffList()
 
   var cardtop = "<div class='card'>"+
                   "<h4 class='card-header bg-info text-white'>Staff List</h4>"+
-                  "<div class='card-body'>";
+                  "<div class='card-body table-responsive'>";
   var cardbot = "</div>"+
               "</div>"+
               "<br><br>";
@@ -212,7 +175,7 @@ function getHouseList()
 
   var cardtop = "<div class='card'>"+
                   "<h4 class='card-header bg-info text-white'>House List</h4>"+
-                  "<div class='card-body'>";
+                  "<div class='card-body table-responsive'>";
   var cardbot = "</div>"+
               "</div>"+
               "<br><br>";
