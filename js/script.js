@@ -138,7 +138,7 @@ function getStaffList()
       }
 
       stafftable += "<td>"+(i+1)+". "+cnamenode.firstChild.nodeValue+"</td>"+
-                      "<td><button onclick='getCleanersSchedule("+cleanerIndex+")'>View Schedule</button></td>"+
+                      "<td style='width:100px'><button class='btn btn-success btn-sm' onclick='getCleanersSchedule("+cleanerIndex+")'>View Schedule</button></td>"+
                     "</tr>";
     }
 
