@@ -173,14 +173,14 @@ function getHouseList()
               "</div>"+
               "<br><br>";
 
-  var housetable = "<table border='1' style='border-collapse='collapse''>"+
-  "<tr bgcolor='aqua'>"+
+  var housetable = "<table class='table table-bordered'>"+
+  "<tr class='bg-info text-white'>"+
     "<th>#</th>"+
     "<th>Owner</th>"+
     "<th>Address</th>"+
     "<th>Type</th>"+
     "<th>Hire Date</th>"+
-    "<th>Total Wages (RM)</th>"+
+    "<th>Total Wages</th>"+
     "<th>View Schedule</th>"+
   "</tr>";
 
@@ -220,8 +220,8 @@ function getHouseList()
     "<td>"+fullAddress+"</td>"+
     "<td>"+housetype.toUpperCase()+"</td>"+
     "<td>"+
-      "<table border='1' style='border-collapse='collapse''>"+
-        "<tr>"+
+      "<table class='table table-bordered'>"+
+        "<tr class='bg-info text-white'>"+
           "<th>Start Date</th>"+
           "<th>End Date</th>"+
         "</tr>"+
@@ -231,8 +231,8 @@ function getHouseList()
         "</tr>"+
       "</table>"+
     "</td>"+
-    "<td align='center'>"+calcTotalWages(houseIndex,wagesRate)+"</td>"+
-    "<td><button onclick='getSchedule("+houseIndex+")'>View Schedule</button></td>"+
+    "<td align='center'>RM"+calcTotalWages(houseIndex,wagesRate)+"</td>"+
+    "<td><button class='btn btn-success btn-sm' onclick='getSchedule("+houseIndex+")'>View Schedule</button></td>"+
   "</tr>";
   }
 
