@@ -345,6 +345,10 @@ function getSchedule(index)
     string += "</fieldset><br>";
   }
 
+  $(document).ready(function(){
+    $('#scheduleModal').modal('show');
+  });
+
   // get output area
   var schedule = document.getElementById("schedule");
   schedule.innerHTML = string;
