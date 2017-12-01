@@ -180,8 +180,8 @@ function getHouseList()
               "</div>"+
               "<br><br>";
 
-  var housetable = "<table class='table table-bordered'>"+
-  "<tr class='bg-info text-white'>"+
+  var housetable = "<table class='table table-bordered' id='houseTable'>"+
+  "<thead><tr class='bg-info text-white'>"+
     "<th>#</th>"+
     "<th>Owner</th>"+
     "<th>Address</th>"+
@@ -189,7 +189,7 @@ function getHouseList()
     "<th>Hire Date</th>"+
     "<th>Total Wages</th>"+
     "<th>View Schedule</th>"+
-  "</tr>";
+  "</tr></thead><tbody>";
 
   for(i=0;i<house.length;i++)
   {
@@ -243,7 +243,7 @@ function getHouseList()
   "</tr>";
   }
 
-  housetable += "</table>";
+  housetable += "</tbody></table>";
 
    // get output area, and output
   $(document).ready(function(){
@@ -251,6 +251,7 @@ function getHouseList()
     $("#content").empty();
     $("#schedule").empty();
     $("#content").append(cardtop + housetable + cardbot).hide().fadeIn("slow");
+    var houseTable = $('#houseTable').DataTable(); // initialize datatables
   });
 }
 
