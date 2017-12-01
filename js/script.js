@@ -308,8 +308,8 @@ function getSchedule(index)
     {
       var totalfareweek = 0.0;
       string += "<b>Week #"+(j+1)+"</b><br>";
-      string += "<table border='1' style='border-collapse='collapse''>"+
-                "<tr bgcolor='aqua'>"+
+      string += "<table class='table table-bordered'>"+
+                "<tr class='bg-info text-white'>"+
                    "<th>Day</th>"+
                    "<th>Date</th>"+
                    "<th>Cleaning Duration</th>"+
