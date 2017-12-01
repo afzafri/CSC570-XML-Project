@@ -101,14 +101,8 @@ function getStaffList()
   var managerphone = managercontact.getElementsByTagName("phone")[0].firstChild.nodeValue;
   var manageremail = managercontact.getElementsByTagName("email")[0].firstChild.nodeValue;
   // cleaners
-  var cleanerNameString = "";
   var cleaners = staff.getElementsByTagName("cleaners")[0];
   var cleaner = cleaners.getElementsByTagName("cleaner");
-  for(i=0;i<cleaner.length;i++)
-  {
-    var cnamenode = cleaner[i].getElementsByTagName("name")[0];
-    cleanerNameString += "<li>"+cnamenode.firstChild.nodeValue+"</li>";  
-  }
 
   var cardtop = "<div class='card'>"+
                   "<h4 class='card-header bg-info text-white'>Staff List</h4>"+
@@ -117,29 +111,38 @@ function getStaffList()
               "</div>"+
               "<br><br>";
 
-  var stafftable = "<table border='1' style='border-collapse='collapse''>"+
+  var stafftable = "<table class='table table-bordered'>"+
   "<tr>"+
-    "<th colspan='5' bgcolor='aqua'>Staff</th>"+
-  "</tr>"+
-  "<tr>"+
-    "<td colspan='2'>"+
+    "<td>"+
       "Manager"+
     "</td>"+
-    "<td colspan='3' align='left'>"+
+    "<td colspan='2'>"+
       "Name: "+managername+"<br>"+
       "Phone: "+managerphone+"<br>"+
       "Email: "+manageremail+"<br>"+
     "</td>"+
+  "</tr>"+
   "<tr>"+
-  "<tr>"+
-    "<td colspan='2'>"+
+    "<td rowspan='"+(cleaner.length)+"'>"+
       "Cleaners"+
-    "</td>"+
-    "<td colspan='3' align='left'>"+
-      "<ol>"+cleanerNameString+"</ol>"+
-    "</td>"+
-  "<tr>"+
-"</table>";
+    "</td>";
+
+    for(i=0;i<cleaner.length;i++)
+    {
+      var cleanerIndex = i;
+      var cnamenode = cleaner[i].getElementsByTagName("name")[0];
+
+      if(i>0)
+      {
+        stafftable += "<tr>";
+      }
+
+      stafftable += "<td>"+(i+1)+". "+cnamenode.firstChild.nodeValue+"</td>"+
+                      "<td><button onclick='getCleanersSchedule("+cleanerIndex+")'>View Schedule</button></td>"+
+                    "</tr>";
+    }
+
+  stafftable += "</table>";
 
   // clear schedule output
   var schedule = document.getElementById("schedule");
