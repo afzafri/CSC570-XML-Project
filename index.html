@@ -19,17 +19,37 @@
 <script type="text/javascript" src="./js/script.js"></script> <!-- main functions -->
 </head>
 <body>
-<h1>Cleaning Schedule Project</h1>
 
-<button onclick="getCompanyDetails()">Company Details</button>
-<button onclick="getHouseList()">House List</button>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Cleaning Schedule Project</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#" onclick="getCompanyDetails()">Company Details</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Staff List</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" onclick="getHouseList()"">House List</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 <br>
-<br>
 
-<div id="content"></div>
+<div class="container">
 
-<br><br>
-<div id="schedule"></div>
+	<div id="content"></div>
+
+	<br><br>
+	<div id="schedule"></div>
+
+</div>
 
 </body>
 </html>
