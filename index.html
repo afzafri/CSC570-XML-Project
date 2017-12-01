@@ -128,6 +128,7 @@ function getCompanyDetails()
   
 }
 
+// get list of houses from XML
 function getHouseList()
 {
   // houses element
@@ -197,7 +198,7 @@ function getHouseList()
         "</tr>"+
       "</table>"+
     "</td>"+
-    "<td align='center'></td>"+
+    "<td align='center'>"+calcTotalWages(houseIndex,wagesRate)+"</td>"+
     "<td><button onclick='getSchedule("+houseIndex+")'>View Schedule</button></td>"+
   "</tr>";
   }
@@ -207,6 +208,29 @@ function getHouseList()
   // get output area
   var content = document.getElementById("content");
   content.innerHTML = housetable;
+}
+
+// calculate the total fare wages for each house
+function calcTotalWages(index,rate)
+{
+  var totalWages = 0.0;
+  var twhouses = xmlDoc.getElementsByTagName("houses")[0];
+  var twhouse = twhouses.getElementsByTagName("house");
+
+  var hmonth = twhouse[index].getElementsByTagName("month");
+
+  for(x=0;x<hmonth.length;x++)
+  {
+    var hday = hmonth[x].getElementsByTagName("day");
+
+    for(j=0;j<hday.length;j++)
+    {
+      var hdurationnode = hday[j].getElementsByTagName("duration")[0];
+      var hduration = hdurationnode.firstChild.nodeValue;
+      totalWages += parseFloat(hduration) * rate;
+    }
+  }
+  return totalWages;
 }
 
 </script>
