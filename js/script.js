@@ -329,6 +329,8 @@ function getSchedule(index)
 // set navbar item as active onclick
 $(document).ready(function(){
   $(".nav-item").click(function(){
-    $(this).parent().addClass('active');
+    $(".nav-item").removeClass('active');
+    $(this).addClass('active');
   })
+  $("#firstNavItem").addClass('active'); // set first nav item as active
 });
