@@ -280,7 +280,7 @@ function getSchedule(index)
         var dayduration = hdaynode[z].getElementsByTagName("duration")[0].firstChild.nodeValue;
         var daycleaner = hdaynode[z].getElementsByTagName("cleaner")[0].firstChild.nodeValue;
         var rateperday = parseFloat(dayduration) * getFareRate();
-        
+
         string += "<tr>"+
                     "<td>"+hdayname+"</td>"+
                     "<td>"+daydate+"</td>"+
@@ -290,6 +290,13 @@ function getSchedule(index)
                   "</tr>";
 
       }
+
+      string += "<tr>"+
+      				"<th colspan='4' align='right'>TOTAL</th>"+
+      				"<td>RM100</td>"+
+      			"</tr>";
+
+
       string += "</table><br>";
     }
   }
