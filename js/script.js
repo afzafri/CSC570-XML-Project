@@ -175,14 +175,15 @@ function getStaffList()
     {
       var cleanerIndex = i;
       var cnamenode = cleaner[i].getElementsByTagName("name")[0];
+      var cleanerName = cnamenode.firstChild.nodeValue;
 
       if(i>0)
       {
         stafftable += "<tr>";
       }
 
-      stafftable += "<td>"+(i+1)+". "+cnamenode.firstChild.nodeValue+"</td>"+
-                      "<td style='width:100px'><button class='btn btn-success btn-sm' onclick='getCleanersSchedule("+cleanerIndex+")'>View Schedule</button></td>"+
+      stafftable += "<td>"+(i+1)+". "+cleanerName+"</td>"+
+                      "<td style='width:100px'><button class='btn btn-success btn-sm' onclick='getCleanersSchedule(&quot;"+cleanerName+"&quot;)'>View Schedule</button></td>"+
                     "</tr>";
     }
 
@@ -404,7 +405,17 @@ function getSchedule(index)
   schedule.innerHTML = string;
 }
 
+// get the list of schedule for specific cleaner
+function getCleanersSchedule(cleanerName)
+{
+  $(document).ready(function(){
+    $('#scheduleModal').modal('show');
+  });
 
+  // get output area
+  var schedule = document.getElementById("schedule");
+  schedule.innerHTML = cleanerName;
+}
 
 // set navbar item as active onclick
 $(document).ready(function(){
