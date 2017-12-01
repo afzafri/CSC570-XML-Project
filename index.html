@@ -255,6 +255,7 @@ function getSchedule(index)
   for(i=0;i<hmonth.length;i++)
   {
     var monthname = hmonth[i].getAttribute("name");
+    var totalfaremonth = 0.0;
     string += "<h3>"+monthname+"</h3>";
 
     var hweek = hmonth[i].getElementsByTagName("week");
@@ -300,8 +301,11 @@ function getSchedule(index)
 
 
       string += "</table><br>";
+      totalfaremonth += parseFloat(totalfareweek);
     }
+    string += "Total fare for the month: <b>RM"+totalfaremonth+"</b><br><br>";
   }
+
   // get output area
   var schedule = document.getElementById("schedule");
   schedule.innerHTML = string;
