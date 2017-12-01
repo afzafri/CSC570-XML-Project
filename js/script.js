@@ -120,13 +120,13 @@ var companytable = "<table class='table table-bordered'>"+
       "</tr>"+
   "</table>";
 
-  // clear schedule output
-  var schedule = document.getElementById("schedule");
-  schedule.innerHTML = "";
-
-  // get output area
-  var content = document.getElementById("content");
-  content.innerHTML = cardtop + companytable + cardbot;
+  // get output area, and output
+  $(document).ready(function(){
+    // empty old data
+    $("#content").empty();
+    $("#schedule").empty();
+    $("#content").append(cardtop + companytable + cardbot).hide().fadeIn("slow");
+  });
   
 }
 
@@ -189,13 +189,13 @@ function getStaffList()
 
   stafftable += "</table>";
 
-  // clear schedule output
-  var schedule = document.getElementById("schedule");
-  schedule.innerHTML = "";
-
-  // get output area
-  var content = document.getElementById("content");
-  content.innerHTML = cardtop + stafftable + cardbot;
+   // get output area, and output
+  $(document).ready(function(){
+    // empty old data
+    $("#content").empty();
+    $("#schedule").empty(); 
+    $("#content").append(cardtop + stafftable + cardbot).hide().fadeIn("slow");
+  });
   
 }
 
@@ -282,9 +282,13 @@ function getHouseList()
 
   housetable += "</table>";
 
-  // get output area
-  var content = document.getElementById("content");
-  content.innerHTML = cardtop + housetable + cardbot;
+   // get output area, and output
+  $(document).ready(function(){
+    // empty old data
+    $("#content").empty();
+    $("#schedule").empty();
+    $("#content").append(cardtop + housetable + cardbot).hide().fadeIn("slow");
+  });
 }
 
 // calculate the total fare wages for each house
@@ -394,13 +398,16 @@ function getSchedule(index)
     string += cardbot;
   }
 
+  // get output area, and output
+  $(document).ready(function(){
+    // empty old data
+    $("#schedule").empty();
+    $("#schedule").append(string).hide().fadeIn("slow");
+  });
+
   $(document).ready(function(){
     $('#scheduleModal').modal('show');
   });
-
-  // get output area
-  var schedule = document.getElementById("schedule");
-  schedule.innerHTML = string;
 }
 
 // get the list of schedule for specific cleaner
@@ -458,6 +465,7 @@ function getCleanersSchedule(cleanerName)
         var daycleaner = days[j].getElementsByTagName("cleaner")[0].firstChild.nodeValue;
         var rateperday = parseFloat(dayduration) * getFareRate();
 
+        // only fetch data for that specific cleaner
         if(daycleaner == cleanerName)
         {
           string += "<tr>"+
@@ -477,13 +485,16 @@ function getCleanersSchedule(cleanerName)
 
   string += "</table>";
 
+  // get output area, and output
+  $(document).ready(function(){
+    // empty old data
+    $("#schedule").empty();
+    $("#schedule").append(string).hide().fadeIn("slow");
+  });
+
   $(document).ready(function(){
     $('#scheduleModal').modal('show');
   });
-
-  // get output area
-  var schedule = document.getElementById("schedule");
-  schedule.innerHTML = string;
 }
 
 // set navbar item as active onclick
