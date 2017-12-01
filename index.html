@@ -258,7 +258,10 @@ function getSchedule(index)
 {
   var string = "";
   var houses = xmlDoc.getElementsByTagName("houses")[0];
-  var house = houses.getElementsByTagName("house");
+  var house = houses.getElementsByTagName("house");	
+
+  var hownername = house[index].getElementsByTagName("owner")[0].getElementsByTagName("name")[0].firstChild.nodeValue;
+  string += "<h3>House owner: "+hownername+"</h3>";
 
   var hmonth = house[index].getElementsByTagName("month");
   
