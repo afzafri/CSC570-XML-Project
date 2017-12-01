@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<cleaningservice>
+  <company>
+    <name>Kospek Cleaning Sdn. Bhd.</name>
+    <address>
+      <street>No 4, Tapah Road</street> 
+      <city>Tapah</city>
+      <state>Perak</state> 
+      <postcode>34500</postcode>      
+    </address>
+    <contact>
+      <phone>04-9651234</phone>
+      <email>kospekcleaning@gmail.com</email>        
+    </contact>
+    <staff>
+      <manager>
+        <name>Afif Zafri</name>      
+        <contact>
+          <phone>0174105440</phone>
+          <email>afzafri@gmail.com</email>        
+        </contact>
+      </manager>
+      <cleaners>
+        <cleaner>
+          <name>Syafiq</name>        
+        </cleaner>
+        <cleaner>
+          <name>Asyraf</name>        
+        </cleaner>
+        <cleaner>
+          <name>Yusri</name>        
+        </cleaner>
+        <cleaner>
+          <name>Hassan</name>        
+        </cleaner>
+      </cleaners>
+    </staff>
+    <rate unit="RM" duration="per hour">10</rate>
+  </company>
+  <houses>
+    <house type="bungalow">
+      <address>
+        <street>Taman Sena</street> 
+        <city>Kangar</city>
+        <state>Perlis</state> 
+        <postcode>02400</postcode>      
+      </address>
+      <owner>
+        <name>Afif Zafri</name>      
+        <contact>
+          <phone>0175897541</phone>
+          <email>afzafri@gmail.com</email>        
+        </contact>     
+      </owner>
+      <date>
+        <start_hire>01/01/2017</start_hire>
+        <end_hire>28/02/2017</end_hire>      
+      </date>
+      <schedule>
+        <month name="January">
+            <week>
+              <day name="Saturday">
+                <date>02/01/2017</date>
+                <duration unit="hour">5</duration>
+                <cleaner>Asyraf</cleaner>              
+              </day>
+              <day name="Sunday">
+                <date>03/01/2017</date>
+                <duration unit="hour">3</duration>
+                <cleaner>Syafiq</cleaner>              
+              </day>
+            </week>
+            <week>
+              <day name="Tuesday">
+                <date>05/01/2017</date>
+                <duration unit="hour">2</duration>
+                <cleaner>Yusri</cleaner>              
+              </day>
+              <day name="Sunday">
+                <date>10/01/2017</date>
+                <duration unit="hour">1</duration>
+                <cleaner>Asyraf</cleaner>              
+              </day>
+            </week>
+        </month>
+        <month name="Febuary">
+            <week>
+              <day name="Saturday">
+                <date>02/02/2017</date>
+                <duration unit="hour">4</duration>
+                <cleaner>Asyraf</cleaner>              
+              </day>
+              <day name="Sunday">
+                <date>03/01/2017</date>
+                <duration unit="hour">6</duration>
+                <cleaner>Yusri</cleaner>              
+              </day>
+            </week>
+        </month>
+      </schedule>
+    </house>
+
+    <house type="penthouse">
+      <address>
+        <street>Taman Ria</street> 
+        <city>Sungai Petani</city>
+        <state>Kedah</state> 
+        <postcode>08000</postcode>      
+      </address>
+      <owner>
+        <name>Asyraf Surani</name>      
+        <contact>
+          <phone>0124568745</phone>
+          <email>acab@gmail.com</email>        
+        </contact>     
+      </owner>
+      <date>
+        <start_hire>01/04/2017</start_hire>
+        <end_hire>28/05/2017</end_hire>      
+      </date>
+      <schedule>
+        <month name="January">
+            <week>
+              <day name="Saturday">
+                <date>02/01/2017</date>
+                <duration unit="hour">5</duration>
+                <cleaner>Asyraf</cleaner>              
+              </day>
+              <day name="Sunday">
+                <date>03/01/2017</date>
+                <duration unit="hour">3</duration>
+                <cleaner>Syafiq</cleaner>              
+              </day>
+            </week>
+            <week>
+              <day name="Tuesday">
+                <date>05/01/2017</date>
+                <duration unit="hour">5</duration>
+                <cleaner>Yusri</cleaner>              
+              </day>
+              <day name="Sunday">
+                <date>10/01/2017</date>
+                <duration unit="hour">3</duration>
+                <cleaner>Asyraf</cleaner>              
+              </day>
+            </week>
+        </month>
+        <month name="Febuary">
+            <week>
+              <day name="Saturday">
+                <date>02/02/2017</date>
+                <duration unit="hour">5</duration>
+                <cleaner>Asyraf</cleaner>              
+              </day>
+              <day name="Sunday">
+                <date>03/01/2017</date>
+                <duration unit="hour">3</duration>
+                <cleaner>Yusri</cleaner>              
+              </day>
+            </week>
+            <week>
+              <day name="Monday">
+                <date>04/02/2017</date>
+                <duration unit="hour">5</duration>
+                <cleaner>Syafiq</cleaner>              
+              </day>
+              <day name="Sunday">
+                <date>13/02/2017</date>
+                <duration unit="hour">3</duration>
+                <cleaner>Yusri</cleaner>              
+              </day>
+            </week>
+        </month>
+      </schedule>
+    </house>
+  </houses>
+</cleaningservice>
