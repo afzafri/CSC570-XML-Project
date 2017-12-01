@@ -127,6 +127,88 @@ function getCompanyDetails()
   content.innerHTML = companytable+"<br><br>"+stafftable;
   
 }
+
+function getHouseList()
+{
+  // houses element
+  var houses = xmlDoc.getElementsByTagName("houses")[0];
+
+  // get company address
+  var house = houses.getElementsByTagName("house");
+
+  // get wages rate
+  var wagesRate = xmlDoc.getElementsByTagName("company")[0].getElementsByTagName("rate")[0].firstChild.nodeValue;
+
+  var housetable = "<table border='1' style='border-collapse='collapse''>"+
+  "<tr bgcolor='aqua'>"+
+    "<th>#</th>"+
+    "<th>Owner</th>"+
+    "<th>Address</th>"+
+    "<th>Type</th>"+
+    "<th>Hire Date</th>"+
+    "<th>Total Wages (RM)</th>"+
+    "<th>View Schedule</th>"+
+  "</tr>";
+
+  for(i=0;i<house.length;i++)
+  {
+    var houseIndex = i;
+
+    // get house type attribute
+    var housetype =  house[i].getAttribute("type");
+
+    // get house address
+    var haddress = house[i].getElementsByTagName("address")[0];
+    var hstreet = haddress.getElementsByTagName("street")[0].firstChild.nodeValue;
+    var hcity = haddress.getElementsByTagName("city")[0].firstChild.nodeValue;
+    var hstate = haddress.getElementsByTagName("state")[0].firstChild.nodeValue;
+    var hpostcode = haddress.getElementsByTagName("postcode")[0].firstChild.nodeValue;
+
+    var fullAddress = hstreet+", "+hpostcode+" "+hcity+", "+hstate;
+
+    // get house owner
+    var howner = house[i].getElementsByTagName("owner")[0];
+    var hname = howner.getElementsByTagName("name")[0].firstChild.nodeValue;
+    var hcontact = howner.getElementsByTagName("contact")[0];
+    var hphone = hcontact.getElementsByTagName("phone")[0].firstChild.nodeValue;
+    var hemail = hcontact.getElementsByTagName("email")[0].firstChild.nodeValue;
+
+    var houseOwnerContact = "Name: "+hname+"<br>Phone: "+hphone+"<br>Email: "+hemail;
+
+    // get house hire date
+    var hiredate = house[i].getElementsByTagName("date")[0];
+    var start_date = hiredate.getElementsByTagName("start_hire")[0].firstChild.nodeValue;
+    var end_date = hiredate.getElementsByTagName("end_hire")[0].firstChild.nodeValue;  
+
+    housetable += "<tr>"+
+    "<td>"+(i+1)+"</td>"+
+    "<td>"+houseOwnerContact+"</td>"+
+    "<td>"+fullAddress+"</td>"+
+    "<td>"+housetype.toUpperCase()+"</td>"+
+    "<td>"+
+      "<table border='1' style='border-collapse='collapse''>"+
+        "<tr>"+
+          "<th>Start Date</th>"+
+          "<th>End Date</th>"+
+        "</tr>"+
+        "<tr>"+
+          "<td>"+start_date+"</td>"+
+          "<td>"+end_date+"</td>"+
+        "</tr>"+
+      "</table>"+
+    "</td>"+
+    "<td align='center'></td>"+
+    "<td><button onclick='getSchedule("+houseIndex+")'>View Schedule</button></td>"+
+  "</tr>";
+  }
+
+  housetable += "</table>";
+
+  // get output area
+  var content = document.getElementById("content");
+  content.innerHTML = housetable;
+}
+
 </script>
 </head>
 <body>
