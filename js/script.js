@@ -225,7 +225,7 @@ function getHouseList()
     "<td>"+(i+1)+"</td>"+
     "<td>"+houseOwnerContact+"</td>"+
     "<td>"+fullAddress+"</td>"+
-    "<td>"+housetype.toUpperCase()+"</td>"+
+    "<td>"+toInitUpperCase(housetype)+"</td>"+
     "<td>"+
       "<table class='table table-bordered'>"+
         "<tr class='bg-info text-white'>"+
@@ -306,7 +306,7 @@ function getSchedule(index)
     var totalfaremonth = 0.0;
 
     var cardtop = "<div class='card'>"+
-                  "<h4 class='card-header bg-info text-white'>"+monthname+"</h4>"+
+                  "<h4 class='card-header bg-info text-white'>"+toInitUpperCase(monthname)+"</h4>"+
                   "<div class='card-body'>";
     var cardbot = "</div>"+
               "</div>"+
@@ -341,7 +341,7 @@ function getSchedule(index)
         totalfareweek += parseFloat(rateperday);
 
         string += "<tr>"+
-                    "<td>"+hdayname+"<br>"+daydate+"</td>"+
+                    "<td>"+toInitUpperCase(hdayname)+"<br>"+daydate+"</td>"+
                     "<td>"+dayduration+" "+durationunit+"</td>"+
                     "<td>"+daycleaner+"</td>"+
                     "<td>RM"+rateperday+"</td>"+
@@ -434,13 +434,13 @@ function getCleanersSchedule(cleanerName)
         {
           string += "<tr>"+
                     "<td>"+count+"</td>"+
-                    "<td>"+hdayname+"<br>"+daydate+"</td>"+
+                    "<td>"+toInitUpperCase(hdayname)+"<br>"+daydate+"</td>"+
                     "<td>"+dayduration+" "+durationunit+"</td>"+
                     "<td>"+daycleaner+"</td>"+
                     "<td>RM"+rateperday+"</td>"+
                     "<td>"+houseOwnerContact+"</td>"+
                     "<td>"+fullAddress+"</td>"+
-                    "<td>"+housetype.toUpperCase()+"</td>"+
+                    "<td>"+toInitUpperCase(housetype)+"</td>"+
                   "</tr>";
           count++;
         }
@@ -459,6 +459,12 @@ function getCleanersSchedule(cleanerName)
   $(document).ready(function(){
     $('#scheduleModal').modal('show');
   });
+}
+
+// function for capitalize initial letter
+function toInitUpperCase(string) 
+{
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 // set navbar item as active onclick
