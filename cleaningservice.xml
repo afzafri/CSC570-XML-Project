@@ -1,5 +1,6 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
+<!DOCTYPE cleaningservice SYSTEM "cleaningservice.dtd">
 <cleaningservice>
   <company>
     <name>Kospek Cleaning Sdn. Bhd.</name>
@@ -58,40 +59,40 @@
         <end_hire>28/02/2017</end_hire>      
       </date>
       <schedule>
-        <month name="January">
+        <month name="january">
             <week>
-              <day name="Saturday">
+              <day name="saturday">
                 <date>02/01/2017</date>
                 <duration unit="hour">5</duration>
                 <cleaner>Asyraf</cleaner>              
               </day>
-              <day name="Sunday">
+              <day name="sunday">
                 <date>03/01/2017</date>
                 <duration unit="hour">3</duration>
                 <cleaner>Syafiq</cleaner>              
               </day>
             </week>
             <week>
-              <day name="Tuesday">
+              <day name="tuesday">
                 <date>05/01/2017</date>
                 <duration unit="hour">2</duration>
                 <cleaner>Yusri</cleaner>              
               </day>
-              <day name="Sunday">
+              <day name="sunday">
                 <date>10/01/2017</date>
                 <duration unit="hour">1</duration>
                 <cleaner>Asyraf</cleaner>              
               </day>
             </week>
         </month>
-        <month name="Febuary">
+        <month name="february">
             <week>
-              <day name="Saturday">
+              <day name="saturday">
                 <date>02/02/2017</date>
                 <duration unit="hour">4</duration>
                 <cleaner>Asyraf</cleaner>              
               </day>
-              <day name="Sunday">
+              <day name="sunday">
                 <date>03/01/2017</date>
                 <duration unit="hour">6</duration>
                 <cleaner>Yusri</cleaner>              
@@ -120,52 +121,52 @@
         <end_hire>28/05/2017</end_hire>      
       </date>
       <schedule>
-        <month name="January">
+        <month name="january">
             <week>
-              <day name="Saturday">
+              <day name="saturday">
                 <date>02/01/2017</date>
                 <duration unit="hour">5</duration>
                 <cleaner>Asyraf</cleaner>              
               </day>
-              <day name="Sunday">
+              <day name="sunday">
                 <date>03/01/2017</date>
                 <duration unit="hour">3</duration>
                 <cleaner>Syafiq</cleaner>              
               </day>
             </week>
             <week>
-              <day name="Tuesday">
+              <day name="tuesday">
                 <date>05/01/2017</date>
                 <duration unit="hour">5</duration>
                 <cleaner>Yusri</cleaner>              
               </day>
-              <day name="Sunday">
+              <day name="sunday">
                 <date>10/01/2017</date>
                 <duration unit="hour">3</duration>
                 <cleaner>Asyraf</cleaner>              
               </day>
             </week>
         </month>
-        <month name="Febuary">
+        <month name="february">
             <week>
-              <day name="Saturday">
+              <day name="saturday">
                 <date>02/02/2017</date>
                 <duration unit="hour">5</duration>
                 <cleaner>Asyraf</cleaner>              
               </day>
-              <day name="Sunday">
+              <day name="sunday">
                 <date>03/01/2017</date>
                 <duration unit="hour">3</duration>
                 <cleaner>Yusri</cleaner>              
               </day>
             </week>
             <week>
-              <day name="Monday">
+              <day name="monday">
                 <date>04/02/2017</date>
                 <duration unit="hour">5</duration>
                 <cleaner>Syafiq</cleaner>              
               </day>
-              <day name="Sunday">
+              <day name="sunday">
                 <date>13/02/2017</date>
                 <duration unit="hour">3</duration>
                 <cleaner>Yusri</cleaner>              

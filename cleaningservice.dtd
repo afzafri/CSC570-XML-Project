@@ -1,0 +1,41 @@
+<!-- DTD created at Tue Dec 05 12:50:29 SGT 2017 with EditiX. Please insert an encoding attribute header for converting any DTD  -->
+
+<!ELEMENT  cleaningservice (company,houses)>
+<!ELEMENT  company (name,address,contact,staff,rate)>
+
+<!ELEMENT  staff (manager, cleaners)>
+<!ELEMENT  manager (name, contact)>
+<!ELEMENT  cleaners (cleaner*)>
+<!ELEMENT  rate (#PCDATA)>
+<!ELEMENT  houses (house*)>
+<!ELEMENT  house (address,owner,date,schedule)>
+<!ELEMENT  address (street,city,state,postcode)>
+<!ELEMENT  owner (name,contact)>
+<!ELEMENT  contact (phone, email)>
+<!ELEMENT  start_hire (#PCDATA)>
+<!ELEMENT  end_hire (#PCDATA)>
+<!ELEMENT  schedule (month+)>
+<!ELEMENT  month (week+)>
+<!ELEMENT  week (day+)>
+<!ELEMENT  day (date,duration,cleaner)>
+<!ELEMENT  date (#PCDATA|start_hire|end_hire)*>
+<!ELEMENT  duration (#PCDATA)>
+<!ELEMENT  cleaner (#PCDATA|name)*>
+<!ELEMENT  name (#PCDATA)>
+<!ELEMENT  street (#PCDATA)>
+<!ELEMENT  city (#PCDATA)>
+<!ELEMENT  state (#PCDATA)>
+<!ELEMENT  postcode (#PCDATA)>
+<!ELEMENT  phone (#PCDATA)>
+<!ELEMENT  email (#PCDATA)>
+
+<!ATTLIST rate  unit CDATA #FIXED "RM">
+<!ATTLIST rate  duration CDATA #REQUIRED>
+<!ATTLIST house  type (bungalow|penthouse|terrace|apartment|condominium) #REQUIRED>
+<!ATTLIST month  name (january|february|march|april|may|june|july|august|september|october|november|december) #REQUIRED>
+<!ATTLIST day  name (monday|tuesday|wednesday|thursday|friday|saturday|sunday) #REQUIRED>
+<!ATTLIST duration  unit CDATA #FIXED "hour">
+
+<!ENTITY company "Kospek Cleaning Sdn. Bhd.">
+
+
