@@ -129,10 +129,17 @@ function getStaffList()
       "Email: "+manageremail+"<br>"+
     "</td>"+
   "</tr>"+
-  "<tr>"+
-    "<th rowspan='"+(cleaner.length)+"'>"+
-      "Cleaners"+
-    "</th>";
+  "</table>"
+
+  var cleanerlisttable = "<br><hr><table class='table table-bordered' id='cleanerTable'>"+
+                    "<thead>"+
+                      "<tr>"+
+                        "<th>#</th>"+
+                        "<th>Cleaners</th>"+
+                        "<th>Schedule</th>"+
+                      "</tr>"+
+                    "</thead>"+
+                    "<tbody>";
 
     for(i=0;i<cleaner.length;i++)
     {
@@ -140,24 +147,22 @@ function getStaffList()
       var cnamenode = cleaner[i].getElementsByTagName("name")[0];
       var cleanerName = cnamenode.firstChild.nodeValue;
 
-      if(i>0)
-      {
-        stafftable += "<tr>";
-      }
-
-      stafftable += "<td>"+(i+1)+". "+cleanerName+"</td>"+
+      cleanerlisttable += "<tr>"+
+                      "<td width='10px'>"+(i+1)+"</td>"+
+                      "<td>"+cleanerName+"</td>"+
                       "<td style='width:100px'><button class='btn btn-success btn-sm' onclick='getCleanersSchedule(&quot;"+cleanerName+"&quot;)'>View Schedule</button></td>"+
                     "</tr>";
     }
 
-  stafftable += "</table>";
+  cleanerlisttable += "</tbody></table>";
 
    // get output area, and output
   $(document).ready(function(){
     // empty old data
     $("#content").empty();
     $("#schedule").empty(); 
-    $("#content").append(cardtop + stafftable + cardbot).hide().fadeIn("slow");
+    $("#content").append(cardtop + stafftable + cleanerlisttable + cardbot).hide().fadeIn("slow");
+    var cleanerTable = $('#cleanerTable').DataTable(); // initialize datatables
   });
   
 }
