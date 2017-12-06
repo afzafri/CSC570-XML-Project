@@ -3,99 +3,198 @@
 <!DOCTYPE cleaningservice SYSTEM "cleaningservice.dtd">
 <cleaningservice>
   <company>
+  
     <name>Kospek Cleaning Sdn. Bhd.</name>
+    
     <address>
       <street>No 4, Tapah Road</street> 
       <city>Tapah</city>
       <state>Perak</state> 
-      <postcode>34500</postcode>      
+      <postcode>34500</postcode>
     </address>
+    
     <contact>
       <phone>04-9651234</phone>
-      <email>kospekcleaning@gmail.com</email>        
+      <email>kospekcleaning@gmail.com</email>
     </contact>
+    
     <staff>
       <manager>
-        <name>Afif Zafri</name>      
+        <name>Aaron Aziz Bin Mustapha</name>
         <contact>
           <phone>0175897541</phone>
-          <email>afzafri@gmail.com</email>        
+          <email>aaron9@gmail.com</email>
         </contact>
       </manager>
+      
       <cleaners>
         <cleaner>
-          <name>Syafiq</name>        
+          <name>Muhammad Syam Bin Md Ali</name>
         </cleaner>
         <cleaner>
-          <name>Asyraf</name>        
+          <name>Hamidun Bin Abdul Izzat</name>
         </cleaner>
         <cleaner>
-          <name>Yusri</name>        
+          <name>Hamidah Binti Abu Bakar</name>
         </cleaner>
         <cleaner>
-          <name>Hassan</name>        
+          <name>Ghazali Bin Md Isa</name>
+        </cleaner>
+        <cleaner>
+          <name>Mohd Yahya Bin Idris</name>
+        </cleaner>
+        <cleaner>
+          <name>Nurul Fatimah Binti Ahmad Daud</name>
+        </cleaner>
+        <cleaner>
+          <name>Nur Zarina Binti Zakaria</name>
+        </cleaner>
+        <cleaner>
+          <name>Johan Bin Razak</name>
+        </cleaner>
+        <cleaner>
+          <name>Mustapha Aziz Bin Syakirin</name>
+        </cleaner>
+        <cleaner>
+          <name>Othman Bin Kamarul Zaman</name>
+        </cleaner>
+        <cleaner>
+          <name>Jamal Abdillah Bin Zulkifli</name>
+        </cleaner>
+        <cleaner>
+          <name>Yusrita Binti Fadhli</name>
+        </cleaner>
+        <cleaner>
+          <name>Muhammad Aqil Bin Mohd Darmian</name>
+        </cleaner>
+        <cleaner>
+          <name>Usop Bin Santorian</name>
+        </cleaner>
+        <cleaner>
+          <name>Lisa Suhada Bin Abdul Halim</name>
         </cleaner>
       </cleaners>
+      
     </staff>
+    
     <rate unit="RM" duration="per hour">10</rate>
+    
   </company>
+  
   <houses>
+  
     <house type="bungalow">
       <address>
         <street>Taman Sena</street> 
         <city>Kangar</city>
         <state>Perlis</state> 
-        <postcode>02400</postcode>      
+        <postcode>02400</postcode>
       </address>
+      
       <owner>
-        <name>Afif Zafri</name>      
+        <name>Muhammad Afif Zafri Bin Khuzairi</name>
         <contact>
           <phone>0175897541</phone>
-          <email>afzafri@gmail.com</email>        
-        </contact>     
+          <email>afzafri@gmail.com</email>
+        </contact>
       </owner>
+      
       <date>
-        <start_hire>01/01/2017</start_hire>
-        <end_hire>28/02/2017</end_hire>      
+        <start_hire>2017/01/01</start_hire>
+        <end_hire>2017/02/28</end_hire>
       </date>
+      
       <schedule>
         <month name="january">
             <week>
               <day name="saturday">
-                <date>02/01/2017</date>
+                <date>2017/01/02</date>
                 <duration unit="hour">5</duration>
-                <cleaner>Asyraf</cleaner>              
+                <cleaner>Usop Bin Santorian</cleaner>
               </day>
+              
               <day name="sunday">
-                <date>03/01/2017</date>
+                <date>2017/01/03</date>
                 <duration unit="hour">3</duration>
-                <cleaner>Syafiq</cleaner>              
+                <cleaner>Lisa Suhada Bin Abdul Halim</cleaner>
               </day>
             </week>
+            
             <week>
               <day name="tuesday">
-                <date>05/01/2017</date>
+                <date>2017/01/05</date>
                 <duration unit="hour">2</duration>
-                <cleaner>Yusri</cleaner>              
+                <cleaner>Johan Bin Razak</cleaner>
               </day>
+              
               <day name="sunday">
-                <date>10/01/2017</date>
+                <date>2017/01/10</date>
                 <duration unit="hour">1</duration>
-                <cleaner>Asyraf</cleaner>              
+                <cleaner>Lisa Suhada Bin Abdul Halim</cleaner>
+              </day>
+            </week>
+            
+            <week>
+              <day name="wednesday">
+                <date>2017/01/18</date>
+                <duration unit="hour">6</duration>
+                <cleaner>Nurul Fatimah Binti Ahmad Daud</cleaner>
+              </day>
+              
+              <day name="saturday">
+                <date>2017/01/21</date>
+                <duration unit="hour">5</duration>
+                <cleaner>Muhammad Aqil Bin Mohd Darmian</cleaner>
+              </day>
+            </week>
+            
+            <week>
+              <day name="monday">
+                <date>2017/01/23</date>
+                <duration unit="hour">3</duration>
+                <cleaner>Usop Bin Santorian</cleaner>
+              </day>
+              
+              <day name="friday">
+                <date>2017/01/27</date>
+                <duration unit="hour">4</duration>
+                <cleaner>Lisa Suhada Bin Abdul Halim</cleaner>
               </day>
             </week>
         </month>
+        
         <month name="february">
             <week>
-              <day name="saturday">
-                <date>02/02/2017</date>
+              <day name="thursday">
+                <date>2017/02/02</date>
                 <duration unit="hour">4</duration>
-                <cleaner>Asyraf</cleaner>              
+                <cleaner>Othman Bin Kamarul Zaman</cleaner>
               </day>
-              <day name="sunday">
-                <date>03/01/2017</date>
+              
+              <day name="friday">
+                <date>2017/02/03</date>
                 <duration unit="hour">6</duration>
-                <cleaner>Yusri</cleaner>              
+                <cleaner>Johan Bin Razak</cleaner>
+              </day>
+            </week>
+            
+            <week>
+              <day name="sunday">
+                <date>2017/02/05</date>
+                <duration unit="hour">3</duration>
+                <cleaner>Othman Bin Kamarul Zaman</cleaner>
+              </day>
+              
+              <day name="tuesday">
+                <date>2017/02/07</date>
+                <duration unit="hour">3</duration>
+                <cleaner>Hamidun Bin Abdul Izzat</cleaner>
+              </day>
+              
+              <day name="friday">
+                <date>2017/02/10</date>
+                <duration unit="hour">2</duration>
+                <cleaner>Nur Zarina Binti Zakaria</cleaner>
               </day>
             </week>
         </month>
@@ -107,73 +206,535 @@
         <street>Taman Ria</street> 
         <city>Sungai Petani</city>
         <state>Kedah</state> 
-        <postcode>08000</postcode>      
+        <postcode>08000</postcode>
       </address>
+      
       <owner>
-        <name>Asyraf Surani</name>      
+        <name>Mohd Asyraf Bin Md Surani</name>
         <contact>
           <phone>0124568745</phone>
-          <email>acab@gmail.com</email>        
-        </contact>     
+          <email>acab@gmail.com</email>
+        </contact>
       </owner>
+      
       <date>
-        <start_hire>01/04/2017</start_hire>
-        <end_hire>28/05/2017</end_hire>      
+        <start_hire>2017/02/01</start_hire>
+        <end_hire>2017/03/28</end_hire>
       </date>
+      
       <schedule>
-        <month name="january">
-            <week>
-              <day name="saturday">
-                <date>02/01/2017</date>
-                <duration unit="hour">5</duration>
-                <cleaner>Asyraf</cleaner>              
-              </day>
-              <day name="sunday">
-                <date>03/01/2017</date>
-                <duration unit="hour">3</duration>
-                <cleaner>Syafiq</cleaner>              
-              </day>
-            </week>
-            <week>
-              <day name="tuesday">
-                <date>05/01/2017</date>
-                <duration unit="hour">5</duration>
-                <cleaner>Yusri</cleaner>              
-              </day>
-              <day name="sunday">
-                <date>10/01/2017</date>
-                <duration unit="hour">3</duration>
-                <cleaner>Asyraf</cleaner>              
-              </day>
-            </week>
-        </month>
         <month name="february">
             <week>
               <day name="saturday">
-                <date>02/02/2017</date>
+                <date>2017/02/04</date>
                 <duration unit="hour">5</duration>
-                <cleaner>Asyraf</cleaner>              
+                <cleaner>Ghazali Bin Md Isa</cleaner>
               </day>
-              <day name="sunday">
-                <date>03/01/2017</date>
+              
+              <day name="monday">
+                <date>2017/02/06</date>
                 <duration unit="hour">3</duration>
-                <cleaner>Yusri</cleaner>              
+                <cleaner>Yusrita Binti Fadhli</cleaner>
+              </day>
+              
+              <day name="wednesday">
+                <date>2017/02/08</date>
+                <duration unit="hour">7</duration>
+                <cleaner>Hamidah Binti Abu Bakar</cleaner>
               </day>
             </week>
+            
+            <week>
+              <day name="tuesday">
+                <date>2017/02/14</date>
+                <duration unit="hour">5</duration>
+                <cleaner>Jamal Abdillah Bin Zulkifli</cleaner>
+              </day>
+              
+              <day name="friday">
+                <date>2017/02/17</date>
+                <duration unit="hour">2</duration>
+                <cleaner>Jamal Abdillah Bin Zulkifli</cleaner>
+              </day>
+            </week>
+        </month>
+        
+        <month name="march">
+            <week>
+              <day name="wednesday">
+                <date>2017/03/01</date>
+                <duration unit="hour">6</duration>
+                <cleaner>Mustapha Aziz Bin Syakirin</cleaner>
+              </day>
+              
+              <day name="saturday">
+                <date>2017/03/04</date>
+                <duration unit="hour">3</duration>
+                <cleaner>Mustapha Aziz Bin Syakirin</cleaner>
+              </day>
+            </week>
+            
             <week>
               <day name="monday">
-                <date>04/02/2017</date>
-                <duration unit="hour">5</duration>
-                <cleaner>Syafiq</cleaner>              
+                <date>2017/03/06</date>
+                <duration unit="hour">8</duration>
+                <cleaner>Mohd Yahya Bin Idris</cleaner>
               </day>
+              
+              <day name="thursday">
+                <date>2017/03/09</date>
+                <duration unit="hour">4</duration>
+                <cleaner>Lisa Suhada Bin Abdul Halim</cleaner>
+              </day>
+            </week>
+            
+            <week>
               <day name="sunday">
-                <date>13/02/2017</date>
-                <duration unit="hour">3</duration>
-                <cleaner>Yusri</cleaner>              
+                <date>2017/03/12</date>
+                <duration unit="hour">5</duration>
+                <cleaner>Muhammad Syam Bin Md Ali</cleaner>
+              </day>
+              
+              <day name="tuesday">
+                <date>2017/03/14</date>
+                <duration unit="hour">6</duration>
+                <cleaner>Othman Bin Kamarul Zaman</cleaner>
+              </day>
+              
+              <day name="friday">
+                <date>2017/03/17</date>
+                <duration unit="hour">7</duration>
+                <cleaner>Othman Bin Kamarul Zaman</cleaner>
               </day>
             </week>
         </month>
       </schedule>
     </house>
+    
+    <house type="terrace">
+      <address>
+        <street>Taman Teluk Intan</street> 
+        <city>Bidor</city>
+        <state>Perak</state> 
+        <postcode>34780</postcode>
+      </address>
+      
+      <owner>
+        <name>Jennifer Ann Axwell</name>
+        <contact>
+          <phone>0154889783</phone>
+          <email>jenn.ann@gmail.com</email>
+        </contact>
+      </owner>
+      
+      <date>
+        <start_hire>2017/02/21</start_hire>
+        <end_hire>2017/04/10</end_hire>
+      </date>
+      
+      <schedule>
+        <month name="february">
+            <week>
+              <day name="wednesday">
+                <date>2017/02/22</date>
+                <duration unit="hour">2</duration>
+                <cleaner>Usop Bin Santorian</cleaner>
+              </day>
+              
+              <day name="friday">
+                <date>2017/02/24</date>
+                <duration unit="hour">3</duration>
+                <cleaner>Lisa Suhada Bin Abdul Halim</cleaner>
+              </day>
+            </week>
+            
+            <week>
+              <day name="sunday">
+                <date>2017/02/26</date>
+                <duration unit="hour">5</duration>
+                <cleaner>Jamal Abdillah Bin Zulkifli</cleaner>
+              </day>
+              
+              <day name="tuesday">
+                <date>2017/02/28</date>
+                <duration unit="hour">3</duration>
+                <cleaner>Muhammad Syam Bin Md Ali</cleaner>
+              </day>
+            </week>
+        </month>
+        
+        <month name="march">
+            <week>
+              <day name="wednesday">
+                <date>2017/03/01</date>
+                <duration unit="hour">6</duration>
+                <cleaner>Johan Bin Razak</cleaner>
+              </day>
+              
+              <day name="saturday">
+                <date>2017/03/04</date>
+                <duration unit="hour">5</duration>
+                <cleaner>Johan Bin Razak</cleaner>
+              </day>
+            </week>
+            
+            <week>
+              <day name="tuesday">
+                <date>2017/03/07</date>
+                <duration unit="hour">5</duration>
+                <cleaner>Muhammad Aqil Bin Mohd Darmian</cleaner>
+              </day>
+              
+              <day name="saturday">
+                <date>2017/03/11</date>
+                <duration unit="hour">8</duration>
+                <cleaner>Yusrita Binti Fadhli</cleaner>
+              </day>
+            </week>
+            
+            <week>
+              <day name="monday">
+                <date>2017/03/13</date>
+                <duration unit="hour">7</duration>
+                <cleaner>Nurul Fatimah Binti Ahmad Daud</cleaner>
+              </day>
+              
+              <day name="wednesday">
+                <date>2017/03/15</date>
+                <duration unit="hour">5</duration>
+                <cleaner>Hamidun Bin Abdul Izzat</cleaner>
+              </day>
+              
+              <day name="friday">
+                <date>2017/03/17</date>
+                <duration unit="hour">7</duration>
+                <cleaner>Hamidun Bin Abdul Izzat</cleaner>
+              </day>
+            </week>
+        </month>
+        
+        <month name="april">
+            <week>
+              <day name="sunday">
+                <date>2017/04/02</date>
+                <duration unit="hour">4</duration>
+                <cleaner>Jamal Abdillah Bin Zulkifli</cleaner>
+              </day>
+              
+              <day name="tuesday">
+                <date>2017/04/04</date>
+                <duration unit="hour">5</duration>
+                <cleaner>Ghazali Bin Md Isa</cleaner>
+              </day>
+              
+              <day name="friday">
+                <date>2017/04/07</date>
+                <duration unit="hour">7</duration>
+                <cleaner>Ghazali Bin Md Isa</cleaner>
+              </day>
+            </week>
+            
+            <week>
+              <day name="sunday">
+                <date>2017/04/09</date>
+                <duration unit="hour">8</duration>
+                <cleaner>Nur Zarina Binti Zakaria</cleaner>
+              </day>
+            </week>
+        </month>
+      </schedule>
+    </house>
+    
+    <house type="condominium">
+      <address>
+        <street>Fraser Hill</street> 
+        <city>Bukit Bintang</city>
+        <state>Wilayah Persekutuan Kuala Lumpur</state> 
+        <postcode>67800</postcode>
+      </address>
+      
+      <owner>
+        <name>Ashraf Sinclair Bin Riezman</name>
+        <contact>
+          <phone>0192323456</phone>
+          <email>ash.sinclair67@gmail.com</email>
+        </contact>
+      </owner>
+      
+      <date>
+        <start_hire>2017/04/11</start_hire>
+        <end_hire>2017/04/30</end_hire>
+      </date>
+      
+      <schedule>
+        <month name="april">
+            <week>
+              <day name="wednesday">
+                <date>2017/04/12</date>
+                <duration unit="hour">4</duration>
+                <cleaner>Johan Bin Razak</cleaner>
+              </day>
+              
+              <day name="friday">
+                <date>2017/04/14</date>
+                <duration unit="hour">6</duration>
+                <cleaner>Othman Bin Kamarul Zaman</cleaner>
+              </day>
+            </week>
+            
+            <week>
+              <day name="sunday">
+                <date>2017/04/16</date>
+                <duration unit="hour">5</duration>
+                <cleaner>Othman Bin Kamarul Zaman</cleaner>
+              </day>
+              
+              <day name="tuesday">
+                <date>2017/04/18</date>
+                <duration unit="hour">7</duration>
+                <cleaner>Muhammad Syam Bin Md Ali</cleaner>
+              </day>
+              
+              <day name="thursday">
+                <date>2017/04/20</date>
+                <duration unit="hour">5</duration>
+                <cleaner>Mohd Yahya Bin Idris</cleaner>
+              </day>
+            </week>
+            
+            <week>
+              <day name="monday">
+                <date>2017/04/24</date>
+                <duration unit="hour">3</duration>
+                <cleaner>Nur Zarina Binti Zakaria</cleaner>
+              </day>
+              
+              <day name="friday">
+                <date>2017/04/28</date>
+                <duration unit="hour">7</duration>
+                <cleaner>Johan Bin Razak</cleaner>
+              </day>
+              
+              <day name="saturday">
+                <date>2017/04/29</date>
+                <duration unit="hour">8</duration>
+                <cleaner>Johan Bin Razak</cleaner>
+              </day>
+            </week>
+        </month>
+      </schedule>
+    </house>
+    
+    <house type="penthouse">
+      <address>
+        <street>Jalan Chow Kit</street> 
+        <city>Georgetown</city>
+        <state>Pulau Pinang</state> 
+        <postcode>02800</postcode>
+      </address>
+      
+      <owner>
+        <name>Khaled Bin Uais Ku Herman</name>
+        <contact>
+          <phone>0174452289</phone>
+          <email>khaled.uais54@gmail.com</email>
+        </contact>
+      </owner>
+      
+      <date>
+        <start_hire>2017/05/06</start_hire>
+        <end_hire>2017/06/16</end_hire>
+      </date>
+      
+      <schedule>
+        <month name="may">
+            <week>
+              <day name="monday">
+                <date>2017/05/08</date>
+                <duration unit="hour">4</duration>
+                <cleaner>Nur Zarina Binti Zakaria</cleaner>
+              </day>
+              
+              <day name="thursday">
+                <date>2017/05/11</date>
+                <duration unit="hour">5</duration>
+                <cleaner>Mustapha Aziz Bin Syakirin</cleaner>
+              </day>
+            </week>
+            
+            <week>
+              <day name="sunday">
+                <date>2017/05/14</date>
+                <duration unit="hour">7</duration>
+                <cleaner>Muhammad Syam Bin Md Ali</cleaner>
+              </day>
+              
+              <day name="tuesday">
+                <date>2017/05/16</date>
+                <duration unit="hour">8</duration>
+                <cleaner>Mustapha Aziz Bin Syakirin</cleaner>
+              </day>
+              
+              <day name="saturday">
+                <date>2017/05/20</date>
+                <duration unit="hour">8</duration>
+                <cleaner>Nurul Fatimah Binti Ahmad Daud</cleaner>
+              </day>
+            </week>
+        </month>
+        
+        <month name="june">
+            <week>
+              <day name="friday">
+                <date>2017/06/02</date>
+                <duration unit="hour">3</duration>
+                <cleaner>Lisa Suhada Bin Abdul Halim</cleaner>
+              </day>
+              
+              <day name="saturday">
+                <date>2017/06/03</date>
+                <duration unit="hour">8</duration>
+                <cleaner>Hamidah Binti Abu Bakar</cleaner>
+              </day>
+            </week>
+            
+            <week>
+              <day name="monday">
+                <date>2017/06/05</date>
+                <duration unit="hour">7</duration>
+                <cleaner>Hamidah Binti Abu Bakar</cleaner>
+              </day>
+              
+              <day name="wednesday">
+                <date>2017/06/07</date>
+                <duration unit="hour">5</duration>
+                <cleaner>Hamidun Bin Abdul Izzat</cleaner>
+              </day>
+              
+              <day name="saturday">
+                <date>2017/06/10</date>
+                <duration unit="hour">8</duration>
+                <cleaner>Nur Zarina Binti Zakaria</cleaner>
+              </day>
+            </week>
+            
+            <week>
+              <day name="monday">
+                <date>2017/06/12</date>
+                <duration unit="hour">3</duration>
+                <cleaner>Mustapha Aziz Bin Syakirin</cleaner>
+              </day>
+              
+              <day name="thursday">
+                <date>2017/04/15</date>
+                <duration unit="hour">3</duration>
+                <cleaner>Johan Bin Razak</cleaner>
+              </day>
+            </week>
+        </month>
+      </schedule>
+    </house>
+    
+    <house type="terrace">
+      <address>
+        <street>Taman Hang Tuah</street> 
+        <city>Jasin</city>
+        <state>Melaka</state> 
+        <postcode>89000</postcode>
+      </address>
+      
+      <owner>
+        <name>Camilla Cabello Lorenzo</name>
+        <contact>
+          <phone>0189009300</phone>
+          <email>camilla.cabello96@gmail.com</email>
+        </contact>
+      </owner>
+      
+      <date>
+        <start_hire>2017/07/01</start_hire>
+        <end_hire>2017/07/30</end_hire>
+      </date>
+      
+      <schedule>
+        <month name="july">
+            <week>
+              <day name="sunday">
+                <date>2017/07/02</date>
+                <duration unit="hour">5</duration>
+                <cleaner>Johan Bin Razak</cleaner>
+              </day>
+              
+              <day name="tuesday">
+                <date>2017/07/04</date>
+                <duration unit="hour">2</duration>
+                <cleaner>Yusrita Binti Fadhli</cleaner>
+              </day>
+            </week>
+            
+            <week>
+              <day name="monday">
+                <date>2017/07/10</date>
+                <duration unit="hour">1</duration>
+                <cleaner>Hamidun Bin Abdul Izzat</cleaner>
+              </day>
+              
+              <day name="tuesday">
+                <date>2017/05/11</date>
+                <duration unit="hour">3</duration>
+                <cleaner>Othman Bin Kamarul Zaman</cleaner>
+              </day>
+              
+              <day name="friday">
+                <date>2017/07/14</date>
+                <duration unit="hour">4</duration>
+                <cleaner>Nurul Fatimah Binti Ahmad Daud</cleaner>
+              </day>
+            </week>
+            
+            <week>
+              <day name="sunday">
+                <date>2017/07/16</date>
+                <duration unit="hour">4</duration>
+                <cleaner>Jamal Abdillah Bin Zulkifli</cleaner>
+              </day>
+              
+              <day name="wednesday">
+                <date>2017/07/19</date>
+                <duration unit="hour">7</duration>
+                <cleaner>Lisa Suhada Bin Abdul Halim</cleaner>
+              </day>
+              
+              <day name="friday">
+                <date>2017/07/21</date>
+                <duration unit="hour">5</duration>
+                <cleaner>Jamal Abdillah Bin Zulkifli</cleaner>
+              </day>
+            </week>
+            
+            <week>
+              <day name="tuesday">
+                <date>2017/07/25</date>
+                <duration unit="hour">8</duration>
+                <cleaner>Usop Bin Santorian</cleaner>
+              </day>
+              
+              <day name="wednesday">
+                <date>2017/07/26</date>
+                <duration unit="hour">7</duration>
+                <cleaner>Johan Bin Razak</cleaner>
+              </day>
+              
+              <day name="friday">
+                <date>2017/07/28</date>
+                <duration unit="hour">8</duration>
+                <cleaner>Muhammad Syam Bin Md Ali</cleaner>
+              </day>
+            </week>
+        </month>
+      </schedule>
+    </house>
+    
   </houses>
+  
 </cleaningservice>
