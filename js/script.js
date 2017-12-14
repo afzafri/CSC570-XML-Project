@@ -131,7 +131,9 @@ function getStaffList()
   "</tr>"+
   "</table>"
 
-  var cleanerlisttable = "<br><hr><table class='table table-bordered' id='cleanerTable'>"+
+  var addCleanerButton = "<button class='btn btn-primary btn-sm' data-toggle='modal' data-target='#addCleanerModal'>Add Cleaner</button>";
+
+  var cleanerlisttable = "<br><hr>"+addCleanerButton+"<br><br><table class='table table-bordered' id='cleanerTable'>"+
                     "<thead>"+
                       "<tr>"+
                         "<th>#</th>"+
@@ -152,7 +154,7 @@ function getStaffList()
                       "<td width='10px'>"+(i+1)+"</td>"+
                       "<td>"+cleanerName+"</td>"+
                       "<td style='width:100px'><button class='btn btn-success btn-sm' onclick='getCleanersSchedule(&quot;"+cleanerName+"&quot;)'>View Schedule</button></td>"+
-                      "<td><button class='btn btn-danger btn-sm' onclick='deleteCleaner("+i+")'>Delete</button></td>"
+                      "<td><button class='btn btn-danger btn-sm' onclick='deleteCleaner("+i+")'>Delete</button></td>"+
                     "</tr>";
     }
 
