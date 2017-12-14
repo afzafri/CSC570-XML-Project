@@ -154,7 +154,8 @@ function getStaffList()
                       "<td width='10px'>"+(i+1)+"</td>"+
                       "<td>"+cleanerName+"</td>"+
                       "<td style='width:100px'><button class='btn btn-success btn-sm' onclick='getCleanersSchedule(&quot;"+cleanerName+"&quot;)'>View Schedule</button></td>"+
-                      "<td><button class='btn btn-danger btn-sm' onclick='deleteCleaner("+i+")'>Delete</button></td>"+
+                      "<td><button class='btn btn-info btn-sm' onclick='openUpdateModal("+i+")'>Edit</button> &nbsp;"+
+                      "<button class='btn btn-danger btn-sm' onclick='deleteCleaner("+i+")'>Delete</button></td>"+
                     "</tr>";
     }
 
@@ -199,6 +200,38 @@ function addCleaner(name)
   getStaffList();
 }
 
+// open update modal form
+function openUpdateModal(index)
+{
+  document.getElementById("cleanerUpdId").value = index; // set cleaner array index
+  $("#updateCleanerModal").modal('show');
+}
+
+// update cleaner's name
+function updateCleaner(newName, index)
+{
+  // company element
+  var company = xmlDoc.getElementsByTagName("company")[0];
+
+  // get company staff
+  var staff = company.getElementsByTagName("staff")[0];
+  // cleaners
+  var cleaners = staff.getElementsByTagName("cleaners")[0];
+  var cleaner = cleaners.getElementsByTagName("cleaner");
+
+  // update new cleaner name
+  var cnamenode = cleaner[index].getElementsByTagName("name")[0];
+  cnamenode.firstChild.nodeValue = newName;
+
+  // clear data and close modal
+  document.getElementById("NewcleanerName").value = "";
+  document.getElementById("cleanerUpdId").value = "";
+  $("#updateCleanerModal").modal('hide');
+
+  // re-call function, to display new result
+  getStaffList();
+}
+
 // delete cleaner node 
 function deleteCleaner(index)
 {
@@ -216,7 +249,6 @@ function deleteCleaner(index)
 
   // re-call function, to display new result
   getStaffList();
-  console.log(xmlDoc);
 }
 
 // get list of houses from XML
