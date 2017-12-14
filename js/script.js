@@ -137,6 +137,7 @@ function getStaffList()
                         "<th>#</th>"+
                         "<th>Cleaners</th>"+
                         "<th>Schedule</th>"+
+                        "<th>Actions</th>"+
                       "</tr>"+
                     "</thead>"+
                     "<tbody>";
@@ -151,6 +152,7 @@ function getStaffList()
                       "<td width='10px'>"+(i+1)+"</td>"+
                       "<td>"+cleanerName+"</td>"+
                       "<td style='width:100px'><button class='btn btn-success btn-sm' onclick='getCleanersSchedule(&quot;"+cleanerName+"&quot;)'>View Schedule</button></td>"+
+                      "<td><button class='btn btn-danger btn-sm' onclick='deleteCleaner("+i+")'>Delete</button></td>"
                     "</tr>";
     }
 
@@ -165,6 +167,25 @@ function getStaffList()
     var cleanerTable = $('#cleanerTable').DataTable(); // initialize datatables
   });
   
+}
+
+// delete cleaner node 
+function deleteCleaner(index)
+{
+  // company element
+  var company = xmlDoc.getElementsByTagName("company")[0];
+
+  // get company staff
+  var staff = company.getElementsByTagName("staff")[0];
+  // cleaners
+  var cleaners = staff.getElementsByTagName("cleaners")[0];
+  var cleaner = cleaners.getElementsByTagName("cleaner");
+
+  // remove the node
+  var removedNode = cleaners.removeChild(cleaner[index]);
+
+  // re-call function, to display new result
+  getStaffList();
 }
 
 // get list of houses from XML
