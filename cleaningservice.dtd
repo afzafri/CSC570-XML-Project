@@ -9,7 +9,7 @@
 <!ELEMENT  rate (#PCDATA)>
 <!ELEMENT  houses (house*)>
 <!ELEMENT  house (address,owner,date,schedule)>
-<!ELEMENT  address (street,city,state,postcode)>
+<!ELEMENT  address (street,postcode,city,state)>
 <!ELEMENT  owner (name,contact)>
 <!ELEMENT  contact (phone, email)>
 <!ELEMENT  start_hire (#PCDATA)>
@@ -23,14 +23,14 @@
 <!ELEMENT  cleaner (#PCDATA|name)*>
 <!ELEMENT  name (#PCDATA)>
 <!ELEMENT  street (#PCDATA)>
+<!ELEMENT  postcode (#PCDATA)>
 <!ELEMENT  city (#PCDATA)>
 <!ELEMENT  state (#PCDATA)>
-<!ELEMENT  postcode (#PCDATA)>
 <!ELEMENT  phone (#PCDATA)>
 <!ELEMENT  email (#PCDATA)>
 
 <!ATTLIST rate  unit CDATA #FIXED "RM">
-<!ATTLIST rate  duration CDATA #REQUIRED>
+<!ATTLIST rate  duration CDATA #FIXED "per hour">
 <!ATTLIST house  type (bungalow|penthouse|terrace|apartment|condominium) #REQUIRED>
 <!ATTLIST month  name (january|february|march|april|may|june|july|august|september|october|november|december) #REQUIRED>
 <!ATTLIST day  name (monday|tuesday|wednesday|thursday|friday|saturday|sunday) #REQUIRED>
