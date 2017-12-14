@@ -171,6 +171,34 @@ function getStaffList()
   
 }
 
+// add new cleaner node
+function addCleaner(name)
+{
+
+  // company element
+  var company = xmlDoc.getElementsByTagName("company")[0];
+
+  // get company staff
+  var staff = company.getElementsByTagName("staff")[0];
+  // cleaners
+  var cleaners = staff.getElementsByTagName("cleaners")[0];
+
+  newCleaner = xmlDoc.createElement("cleaner"); // create new cleaner node 
+  newName = xmlDoc.createElement("name"); // create new name node
+  newNameValue = xmlDoc.createTextNode(name); // create new name text node
+  newName.appendChild(newNameValue); // add the text node into name node
+  newCleaner.appendChild(newName); // add name node into cleaner node
+
+  cleaners.appendChild(newCleaner); // add cleaner node into cleaners node
+
+  // clear input text and close modal
+  document.getElementById("cleanerName").value = "";
+  $("#addCleanerModal").modal('hide');
+
+  // re-call function, to display new result
+  getStaffList();
+}
+
 // delete cleaner node 
 function deleteCleaner(index)
 {
@@ -188,6 +216,7 @@ function deleteCleaner(index)
 
   // re-call function, to display new result
   getStaffList();
+  console.log(xmlDoc);
 }
 
 // get list of houses from XML
