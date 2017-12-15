@@ -262,8 +262,13 @@ function deleteCleaner(index)
   var cleaners = staff.getElementsByTagName("cleaners")[0];
   var cleaner = cleaners.getElementsByTagName("cleaner");
 
+  var originalName = cleaner[index].getElementsByTagName("name")[0].firstChild.nodeValue;
+
   // remove the node
   var removedNode = cleaners.removeChild(cleaner[index]);
+
+  // since the cleaner is removed, set the cleaner schedule to none.
+  updAllName(originalName, "No Cleaner Assigned");
 
   // re-call function, to display new result
   getStaffList();
