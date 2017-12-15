@@ -96,11 +96,8 @@ function getCompanyDetails()
 // get list of staff
 function getStaffList()
 {
-  // company element
-  var company = xmlDoc.getElementsByTagName("company")[0];
-
   // get company staff
-  var staff = company.getElementsByTagName("staff")[0];
+  var staff = xmlDoc.getElementsByTagName("staff")[0];
   // manager
   var manager = staff.getElementsByTagName("manager")[0];
   var managername = manager.getElementsByTagName("name")[0].firstChild.nodeValue;
@@ -175,12 +172,8 @@ function getStaffList()
 // add new cleaner node
 function addCleaner(name)
 {
-
-  // company element
-  var company = xmlDoc.getElementsByTagName("company")[0];
-
   // get company staff
-  var staff = company.getElementsByTagName("staff")[0];
+  var staff = xmlDoc.getElementsByTagName("staff")[0];
   // cleaners
   var cleaners = staff.getElementsByTagName("cleaners")[0];
 
@@ -210,11 +203,8 @@ function openUpdateModal(index)
 // update cleaner's name
 function updateCleaner(newName, index)
 {
-  // company element
-  var company = xmlDoc.getElementsByTagName("company")[0];
-
   // get company staff
-  var staff = company.getElementsByTagName("staff")[0];
+  var staff = xmlDoc.getElementsByTagName("staff")[0];
   // cleaners
   var cleaners = staff.getElementsByTagName("cleaners")[0];
   var cleaner = cleaners.getElementsByTagName("cleaner");
@@ -225,6 +215,21 @@ function updateCleaner(newName, index)
   var cnamenode = cleaner[index].getElementsByTagName("name")[0];
   cnamenode.firstChild.nodeValue = newName;
 
+  // update new cleaner name in all schedules
+  updAllName(originalName, newName);
+
+  // clear data and close modal
+  document.getElementById("NewcleanerName").value = "";
+  document.getElementById("cleanerUpdId").value = "";
+  $("#updateCleanerModal").modal('hide');
+
+  // re-call function, to display new result
+  getStaffList();
+}
+
+// update cleaner name in schedules
+function updAllName(originalName, newName)
+{
   // update new cleaner name in all schedules
   // houses element
   var houses = xmlDoc.getElementsByTagName("houses")[0];
@@ -246,24 +251,13 @@ function updateCleaner(newName, index)
       }
     }
   }
-
-  // clear data and close modal
-  document.getElementById("NewcleanerName").value = "";
-  document.getElementById("cleanerUpdId").value = "";
-  $("#updateCleanerModal").modal('hide');
-
-  // re-call function, to display new result
-  getStaffList();
 }
 
 // delete cleaner node 
 function deleteCleaner(index)
 {
-  // company element
-  var company = xmlDoc.getElementsByTagName("company")[0];
-
   // get company staff
-  var staff = company.getElementsByTagName("staff")[0];
+  var staff = xmlDoc.getElementsByTagName("staff")[0];
   // cleaners
   var cleaners = staff.getElementsByTagName("cleaners")[0];
   var cleaner = cleaners.getElementsByTagName("cleaner");
