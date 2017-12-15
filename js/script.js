@@ -19,8 +19,10 @@ function getCompanyDetails()
 
   // get company contact
   var contact = company.getElementsByTagName("contact")[0];
-  var phone = contact.getElementsByTagName("phone")[0].firstChild.nodeValue;
-  var email = contact.getElementsByTagName("email")[0].firstChild.nodeValue;
+  // I changed the code to use nextSibling, to follow the guidelines rules by my lecturer
+  var contFirstChild = contact.childNodes[1]; // first child node element in contact node
+  var phone = contFirstChild.firstChild.nodeValue;
+  var email = contFirstChild.nextSibling.nextSibling.firstChild.nodeValue; // use nextSibling to access the sibling node
 
   // get wages rate
   var rate = company.getElementsByTagName("rate")[0].firstChild.nodeValue;
@@ -308,7 +310,7 @@ function getHouseList()
   var house = houses.getElementsByTagName("house");
 
   // get wages rate
-  var wagesRate = xmlDoc.getElementsByTagName("company")[0].getElementsByTagName("rate")[0].firstChild.nodeValue;
+  var wagesRate = houses.parentNode.getElementsByTagName("rate")[0].firstChild.nodeValue;
 
   var cardtop = "<div class='card'>"+
                   "<h4 class='card-header bg-info text-white'>House List</h4>"+
