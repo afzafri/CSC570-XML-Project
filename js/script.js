@@ -20,7 +20,8 @@ function getCompanyDetails()
   // get company contact
   var contact = company.getElementsByTagName("contact")[0];
   // I changed the code to use nextSibling, to follow the guidelines rules by my lecturer
-  var contFirstChild = contact.childNodes[1]; // first child node element in contact node
+  var contNodeSiblings = contact.childNodes; // list all the sibling inside contact node
+  var contFirstChild = contNodeSiblings[1]; // first child node element in contact node
   var phone = contFirstChild.firstChild.nodeValue;
   var email = contFirstChild.nextSibling.nextSibling.firstChild.nodeValue; // use nextSibling to access the sibling node
 
