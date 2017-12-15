@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <!DOCTYPE cleaningservice SYSTEM "cleaningservice.dtd">
 
 <cleaningservice>
@@ -8,10 +7,10 @@
     <name>Kospek Cleaning Sdn. Bhd.</name>
     
     <address>
-      <street>No 4, Tapah Road</street> 
+      <street>No 4, Tapah Road, </street>
       <postcode>34500</postcode>
-      <city>Tapah</city>
-      <state>Perak</state> 
+      <city>Tapah, </city>
+      <state>Perak</state>
     </address>
     
     <contact>
@@ -926,6 +925,489 @@
                 <date>2017-08-30</date>
                 <duration unit="hour">3</duration>
                 <cleaner>Hamidah Binti Abu Bakar</cleaner>
+              </day>
+            </week>
+        </month>
+      </schedule>
+    </house>
+    
+     <house type="terrace">
+      <address>
+        <street>Taman Mahawangsa, </street>
+        <postcode>90880</postcode>
+        <city>Kodiang, </city>
+        <state>Kedah</state> 
+      </address>
+      
+      <owner>
+        <name>Farah Nabila Binti Azhar</name>
+        <contact>
+          <phone>0175678897</phone>
+          <email>far.nab11@yahoo.com</email>
+        </contact>
+      </owner>
+      
+      <date>
+        <start_hire>2017-09-01</start_hire>
+        <end_hire>2017-09-15</end_hire>
+      </date>
+      
+      <schedule>
+        <month name="september">
+            <week>
+              <day name="friday">
+                <date>2017-09-01</date>
+                <duration unit="hour">7</duration>
+                <cleaner>Othman Bin Kamarul Zaman</cleaner>
+              </day>
+              
+              <day name="saturday">
+                <date>2017-09-02</date>
+                <duration unit="hour">5</duration>
+                <cleaner>Nur Zarina Binti Zakaria</cleaner>
+              </day>
+            </week>
+            
+            <week>
+              <day name="monday">
+                <date>2017-09-04</date>
+                <duration unit="hour">5</duration>
+                <cleaner>Hamidun Bin Abdul Izzat</cleaner>
+              </day>
+              
+              <day name="friday">
+                <date>2017-09-08</date>
+                <duration unit="hour">4</duration>
+                <cleaner>Yusrita Binti Fadhli</cleaner>
+              </day>
+            </week>
+            
+            <week>
+              <day name="sunday">
+                <date>2017-09-10</date>
+                <duration unit="hour">1</duration>
+                <cleaner>Nurul Fatimah Binti Ahmad Daud</cleaner>
+              </day>
+              
+              <day name="tuesday">
+                <date>2017-09-12</date>
+                <duration unit="hour">6</duration>
+                <cleaner>Lisa Suhada Bin Abdul Halim</cleaner>
+              </day>
+              
+              <day name="wednesday">
+                <date>2017-09-13</date>
+                <duration unit="hour">5</duration>
+                <cleaner>Mustapha Aziz Bin Syakirin</cleaner>
+              </day>
+            </week>
+        </month>
+      </schedule>
+    </house>
+    
+    <house type="condominium">
+      <address>
+        <street>Mont Kiara Street, </street>
+        <postcode>70890</postcode>
+        <city>Bukit Kiara, </city>
+        <state>Wilayah Persekutuan Kuala Lumpur</state> 
+      </address>
+      
+      <owner>
+        <name>Jaafar Bin Onn Tak Onn</name>
+        <contact>
+          <phone>0132567887</phone>
+          <email>jaafar.onn09@yahoo.com</email>
+        </contact>
+      </owner>
+      
+      <date>
+        <start_hire>2017-09-16</start_hire>
+        <end_hire>2017-09-30</end_hire>
+      </date>
+      
+      <schedule>
+        <month name="september">
+            <week>
+              <day name="sunday">
+                <date>2017-09-17</date>
+                <duration unit="hour">5</duration>
+                <cleaner>Mohd Yahya Bin Idris</cleaner>
+              </day>
+              
+              <day name="wednesday">
+                <date>2017-09-20</date>
+                <duration unit="hour">3</duration>
+                <cleaner>Ghazali Bin Md Isa</cleaner>
+              </day>
+              
+              <day name="saturday">
+                <date>2017-09-23</date>
+                <duration unit="hour">7</duration>
+                <cleaner>Johan Bin Razak</cleaner>
+              </day>
+            </week>
+            
+            <week>
+              <day name="monday">
+                <date>2017-09-25</date>
+                <duration unit="hour">4</duration>
+                <cleaner>Yusrita Binti Fadhli</cleaner>
+              </day>
+              
+              <day name="thursday">
+                <date>2017-09-28</date>
+                <duration unit="hour">6</duration>
+                <cleaner>Yusrita Binti Fadhli</cleaner>
+              </day>
+            </week>
+        </month>
+      </schedule>
+    </house>
+    
+    <house type="penthouse">
+      <address>
+        <street>Taman Sepakat Indah, </street>
+        <postcode>50990</postcode>
+        <city>Kajang, </city>
+        <state>Selangor</state> 
+      </address>
+      
+      <owner>
+        <name>Shaheizy Sam Bin Abdullah</name>
+        <contact>
+          <phone>0192098897</phone>
+          <email>shaheizy.sam2@gmail.com</email>
+        </contact>
+      </owner>
+      
+      <date>
+        <start_hire>2017-10-01</start_hire>
+        <end_hire>2017-10-31</end_hire>
+      </date>
+      
+      <schedule>
+        <month name="october">
+            <week>
+              <day name="sunday">
+                <date>2017-10-01</date>
+                <duration unit="hour">8</duration>
+                <cleaner>Johan Bin Razak</cleaner>
+              </day>
+              
+              <day name="thursday">
+                <date>2017-10-05</date>
+                <duration unit="hour">3</duration>
+                <cleaner>Johan Bin Razak</cleaner>
+              </day>
+              
+              <day name="friday">
+                <date>2017-10-06</date>
+                <duration unit="hour">5</duration>
+                <cleaner>Jamal Abdillah Bin Zulkifli</cleaner>
+              </day>
+            </week>
+            
+            <week>
+              <day name="monday">
+                <date>2017-10-09</date>
+                <duration unit="hour">4</duration>
+                <cleaner>Muhammad Aqil Bin Mohd Darmian</cleaner>
+              </day>
+              
+              <day name="thursday">
+                <date>2017-10-12</date>
+                <duration unit="hour">6</duration>
+                <cleaner>Usop Bin Santorian</cleaner>
+              </day>
+            </week>
+            
+            <week>
+              <day name="tuesday">
+                <date>2017-10-17</date>
+                <duration unit="hour">5</duration>
+                <cleaner>Muhammad Aqil Bin Mohd Darmian</cleaner>
+              </day>
+              
+              <day name="saturday">
+                <date>2017-10-21</date>
+                <duration unit="hour">8</duration>
+                <cleaner>Othman Bin Kamarul Zaman</cleaner>
+              </day>
+            </week>
+            
+            <week>
+              <day name="monday">
+                <date>2017-10-23</date>
+                <duration unit="hour">2</duration>
+                <cleaner>Muhammad Syam Bin Md Ali</cleaner>
+              </day>
+              
+              <day name="friday">
+                <date>2017-10-27</date>
+                <duration unit="hour">6</duration>
+                <cleaner>Mustapha Aziz Bin Syakirin</cleaner>
+              </day>
+              
+              <day name="saturday">
+                <date>2017-10-28</date>
+                <duration unit="hour">7</duration>
+                <cleaner>Mustapha Aziz Bin Syakirin</cleaner>
+              </day>
+            </week>
+        </month>
+      </schedule>
+    </house>
+    
+      <house type="bungalow">
+      <address>
+        <street>Jalan Paip Besar, </street>
+        <postcode>40988</postcode>
+        <city>Klang, </city>
+        <state>Selangor</state> 
+      </address>
+      
+      <owner>
+        <name>Zul Ariffin Bin Ahmad Shah</name>
+        <contact>
+          <phone>0162304554</phone>
+          <email>zul.ariffin96@gmail.com</email>
+        </contact>
+      </owner>
+      
+      <date>
+        <start_hire>2017-11-01</start_hire>
+        <end_hire>2017-11-16</end_hire>
+      </date>
+      
+      <schedule>
+        <month name="november">
+            <week>
+              <day name="wednesday">
+                <date>2017-11-01</date>
+                <duration unit="hour">8</duration>
+                <cleaner>Johan Bin Razak</cleaner>
+              </day>
+              
+              <day name="friday">
+                <date>2017-11-03</date>
+                <duration unit="hour">6</duration>
+                <cleaner>Nurul Fatimah Binti Ahmad Daud</cleaner>
+              </day>
+              
+              <day name="saturday">
+                <date>2017-11-04</date>
+                <duration unit="hour">8</duration>
+                <cleaner>Johan Bin Razak</cleaner>
+              </day>
+            </week>
+            
+            <week>
+              <day name="tuesday">
+                <date>2017-11-07</date>
+                <duration unit="hour">7</duration>
+                <cleaner>Hamidah Binti Abu Bakar</cleaner>
+              </day>
+              
+              <day name="saturday">
+                <date>2017-11-11</date>
+                <duration unit="hour">6</duration>
+                <cleaner>Yusrita Binti Fadhli</cleaner>
+              </day>
+            </week>
+        </month>
+      </schedule>
+    </house>
+    
+    <house type="terrace">
+      <address>
+        <street>Taman Lagenda Heights, </street>
+        <postcode>08000</postcode>
+        <city>Sungai Petani, </city>
+        <state>Kedah</state> 
+      </address>
+      
+      <owner>
+        <name>Baddrol Bakhtiar Bin Sazali</name>
+        <contact>
+          <phone>01118097887</phone>
+          <email>bad.bakh7@gmail.com</email>
+        </contact>
+      </owner>
+      
+      <date>
+        <start_hire>2017-11-17</start_hire>
+        <end_hire>2017-11-30</end_hire>
+      </date>
+      
+      <schedule>
+        <month name="november">
+            <week>
+              <day name="sunday">
+                <date>2017-11-19</date>
+                <duration unit="hour">5</duration>
+                <cleaner>Lisa Suhada Bin Abdul Halim</cleaner>
+              </day>
+              
+              <day name="thursday">
+                <date>2017-11-23</date>
+                <duration unit="hour">8</duration>
+                <cleaner>Nurul Fatimah Binti Ahmad Daud</cleaner>
+              </day>
+              
+              <day name="saturday">
+                <date>2017-11-25</date>
+                <duration unit="hour">8</duration>
+                <cleaner>Johan Bin Razak</cleaner>
+              </day>
+            </week>
+            
+            <week>
+              <day name="monday">
+                <date>2017-11-27</date>
+                <duration unit="hour">3</duration>
+                <cleaner>Mustapha Aziz Bin Syakirin</cleaner>
+              </day>
+              
+              <day name="wednesday">
+                <date>2017-11-29</date>
+                <duration unit="hour">4</duration>
+                <cleaner>Mohd Yahya Bin Idris</cleaner>
+              </day>
+            </week>
+        </month>
+      </schedule>
+    </house>
+    
+    
+      <house type="bungalow">
+      <address>
+        <street>Taman Damansara Heights, </street>
+        <postcode>46770</postcode>
+        <city>Bandar Damansar, </city>
+        <state>Wilayah Persekutuan Kuala Lumpur</state> 
+      </address>
+      
+      <owner>
+        <name>Alif Bin Satar</name>
+        <contact>
+          <phone>01112345678</phone>
+          <email>alif.satar56@gmail.com</email>
+        </contact>
+      </owner>
+      
+      <date>
+        <start_hire>2017-12-01</start_hire>
+        <end_hire>2017-12-15</end_hire>
+      </date>
+      
+      <schedule>
+        <month name="december">
+            <week>
+              <day name="friday">
+                <date>2017-12-01</date>
+                <duration unit="hour">5</duration>
+                <cleaner>Jamal Abdillah Bin Zulkifli</cleaner>
+              </day>
+              
+              <day name="saturday">
+                <date>2017-12-02</date>
+                <duration unit="hour">8</duration>
+                <cleaner>Johan Bin Razak</cleaner>
+              </day>
+            </week>
+            
+            <week>
+              <day name="monday">
+                <date>2017-12-04</date>
+                <duration unit="hour">2</duration>
+                <cleaner>Nur Zarina Binti Zakaria</cleaner>
+              </day>
+              
+              <day name="wednesday">
+                <date>2017-12-06</date>
+                <duration unit="hour">7</duration>
+                <cleaner>Yusrita Binti Fadhli</cleaner>
+              </day>
+              
+              <day name="saturday">
+                <date>2017-12-09</date>
+                <duration unit="hour">3</duration>
+                <cleaner>Othman Bin Kamarul Zaman</cleaner>
+              </day>
+            </week>
+            
+             <week>
+              <day name="sunday">
+                <date>2017-12-10</date>
+                <duration unit="hour">6</duration>
+                <cleaner>Johan Bin Razak</cleaner>
+              </day>
+              
+              <day name="thursday">
+                <date>2017-12-14</date>
+                <duration unit="hour">5</duration>
+                <cleaner>Hamidun Bin Abdul Izzat</cleaner>
+              </day>
+            </week>
+        </month>
+      </schedule>
+    </house>
+    
+    <house type="penthouse">
+      <address>
+        <street>Taman Kota Wira, </street>
+        <postcode>34010</postcode>
+        <city>Taiping, </city>
+        <state>Perak</state> 
+      </address>
+      
+      <owner>
+        <name>Margot Robbie Orlando Solares</name>
+        <contact>
+          <phone>0124498008</phone>
+          <email>margot.robbie1@gmail.com</email>
+        </contact>
+      </owner>
+      
+      <date>
+        <start_hire>2017-12-16</start_hire>
+        <end_hire>2017-12-31</end_hire>
+      </date>
+      
+      <schedule>
+        <month name="december">
+            <week>
+              <day name="sunday">
+                <date>2017-12-17</date>
+                <duration unit="hour">7</duration>
+                <cleaner>Mohd Yahya Bin Idris</cleaner>
+              </day>
+              
+              <day name="thursday">
+                <date>2017-12-21</date>
+                <duration unit="hour">6</duration>
+                <cleaner>Mustapha Aziz Bin Syakirin</cleaner>
+              </day>
+            </week>
+            
+            <week>
+              <day name="tuesday">
+                <date>2017-12-26</date>
+                <duration unit="hour">4</duration>
+                <cleaner>Ghazali Bin Md Isa</cleaner>
+              </day>
+              
+              <day name="friday">
+                <date>2017-12-29</date>
+                <duration unit="hour">5</duration>
+                <cleaner>Muhammad Aqil Bin Mohd Darmian</cleaner>
+              </day>
+              
+              <day name="saturday">
+                <date>2017-12-30</date>
+                <duration unit="hour">7</duration>
+                <cleaner>Lisa Suhada Bin Abdul Halim</cleaner>
               </day>
             </week>
         </month>
