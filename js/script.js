@@ -154,8 +154,12 @@ function getStaffList()
                       "<td width='10px'>"+(i+1)+"</td>"+
                       "<td>"+cleanerName+"</td>"+
                       "<td style='width:100px'><button class='btn btn-success btn-sm' onclick='getCleanersSchedule(&quot;"+cleanerName+"&quot;)'>View Schedule</button></td>"+
-                      "<td><button class='btn btn-info btn-sm' onclick='openUpdateModal("+i+")'>Edit</button> &nbsp;"+
-                      "<button class='btn btn-danger btn-sm' onclick='deleteCleaner("+i+")'>Delete</button></td>"+
+                      "<td style='width:150px;text-align:center'>"+
+                      "<div class='btn-group' role='group'>"+
+                        "<button class='btn btn-info btn-sm' onclick='openUpdateModal("+i+")'>Edit</button>"+
+                        "<button class='btn btn-danger btn-sm' onclick='deleteCleaner("+i+")'>Delete</button>"+
+                      "</div>"+
+                      "</td>"+
                     "</tr>";
     }
 
