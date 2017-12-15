@@ -219,9 +219,33 @@ function updateCleaner(newName, index)
   var cleaners = staff.getElementsByTagName("cleaners")[0];
   var cleaner = cleaners.getElementsByTagName("cleaner");
 
-  // update new cleaner name
+  var originalName = cleaner[index].getElementsByTagName("name")[0].firstChild.nodeValue;
+
+  // update new cleaner name for staff list
   var cnamenode = cleaner[index].getElementsByTagName("name")[0];
   cnamenode.firstChild.nodeValue = newName;
+
+  // update new cleaner name in all schedules
+  // houses element
+  var houses = xmlDoc.getElementsByTagName("houses")[0];
+  var house = houses.getElementsByTagName("house");
+
+  for(i=0;i<house.length;i++)
+  {
+    // day element
+    var days = house[i].getElementsByTagName("day");
+
+    for(j=0;j<days.length;j++)
+    {
+      var daycleaner = days[j].getElementsByTagName("cleaner")[0].firstChild.nodeValue;
+
+      // only replace name for specific cleaner
+      if(daycleaner == originalName)
+      {
+        days[j].getElementsByTagName("cleaner")[0].firstChild.nodeValue = newName;
+      }
+    }
+  }
 
   // clear data and close modal
   document.getElementById("NewcleanerName").value = "";
