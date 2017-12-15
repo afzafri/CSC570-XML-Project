@@ -267,11 +267,36 @@ function deleteCleaner(index)
   // remove the node
   var removedNode = cleaners.removeChild(cleaner[index]);
 
-  // since the cleaner is removed, set the cleaner schedule to none.
-  updAllName(originalName, "No Cleaner Assigned");
+  // since the cleaner is removed, delete the schedule
+  delCleanerSchedule(originalName);
 
   // re-call function, to display new result
   getStaffList();
+}
+
+// delete cleaner schedule of specific cleaner
+function delCleanerSchedule(cleanerName)
+{
+  // houses element
+  var houses = xmlDoc.getElementsByTagName("houses")[0];
+  var house = houses.getElementsByTagName("house");
+
+  for(i=0;i<house.length;i++)
+  {
+    // day element
+    var days = house[i].getElementsByTagName("day");
+
+    for(j=0;j<days.length;j++)
+    {
+      var daycleaner = days[j].getElementsByTagName("cleaner")[0].firstChild.nodeValue;
+
+      // only delete schedule of specific cleaner
+      if(daycleaner == cleanerName)
+      {
+        days[j].parentNode.removeChild(days[j]);
+      }
+    }
+  }
 }
 
 // get list of houses from XML
